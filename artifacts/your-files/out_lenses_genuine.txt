@@ -1,0 +1,205 @@
+==============================================================================
+L1  SAME DATA, RELABELED: 'survives G' is 'blind to G'
+==============================================================================
+  5 shapes x 8 transforms = 40 worlds. Each lens partitions them.
+  resolution = classes it splits the 40 worlds into; shapes = of 5 base shapes told apart.
+
+  lens                      resolution  shapes  blind to
+  raw coordinates            40/40       5/5   -
+  topmost point              29/40       5/5   -
+  chirality (signed area)    20/40       5/5   rotate, scale, translate
+  radius from origin         19/40       5/5   rotate, mirror, reverse, shuffle
+  same radius (origin)       19/40       5/5   rotate, mirror, reverse, shuffle
+  topmost index              15/40       4/5   scale, translate, mirror, shear
+  even spacing (origin)      15/40       5/5   rotate, scale, mirror, reverse, shuffle
+  centroid                   14/40       3/5   reverse, shuffle
+  same radius (centroid)     14/40       5/5   rotate, translate, mirror, reverse, shuffle
+  even spacing (centroid)    10/40       5/5   rotate, scale, translate, mirror, reverse, shuffle
+  roundness                  10/40       5/5   rotate, scale, translate, mirror, reverse, shuffle
+  affine roundness            4/40       4/5   rotate, scale, translate, mirror, shear, reverse, shuffle
+  handedness (list)           2/40       2/5   rotate, scale, translate, shear
+  handedness (set)            2/40       2/5   rotate, scale
+  count                       1/40       1/5   rotate, scale, translate, mirror, shear, reverse, shuffle
+  count is 41                 1/40       1/5   rotate, scale, translate, mirror, shear, reverse, shuffle
+  vacuous                     1/40       1/5   rotate, scale, translate, mirror, shear, reverse, shuffle
+
+  Two rows look wrong, and are instructive. 'handedness (set)' is NOT
+  listed as blind to translate; 'topmost point' is NOT listed as blind
+  to reverse/shuffle. Where do they 'see' them?
+      handedness (set)   sees translate  only on: ['ellipse']
+      handedness (set)   sees reverse    only on: ['circle', 'ellipse', 'square']
+      topmost point      sees reverse    only on: ['square']
+  Circle, ellipse, square: the symmetric shapes. The farthest-pair and
+  the topmost corner are TIES there, broken by float noise and list order.
+  'blind to' is a conjunction over all shapes, so one tie-world flips the
+  column. W2's lesson, now as a measurement error in a new metaphor: the
+  symmetric test worlds do not just flatter lenses, they smudge them.
+
+  -> Read the old verdicts off this table: 'SURVIVES under rotations' is
+     just 'rotate' appearing in the blind-to column. Nothing is praised or
+     blamed. 'raw coordinates' is blind to nothing and resolves every world
+     -- and tells you nothing, because a lens that distinguishes everything
+     has no concept. 'vacuous' is blind to everything and has one class.
+     The floor metaphor saw one failure mode (standing on something). The
+     lens sees two: seeing nothing, and seeing everything. The questions
+     live in between, and each one is a particular pattern of blindness.
+
+==============================================================================
+L2  LENSES OVERLAP: THE THIRD THING
+==============================================================================
+  Hold two lenses together: the reading is the pair. Resolution of the
+  pair minus the better single resolution = what neither saw alone.
+
+  lens A                    lens B                       A   B  pair  gain
+  radius from origin        topmost index               19  15    34   +15
+  topmost index             same radius (origin)        15  19    33   +14
+  topmost index             even spacing (origin)       15  15    29   +14
+  topmost index             same radius (centroid)      15  14    28   +13
+  centroid                  chirality (signed area)     14  20    31   +11
+  topmost index             centroid                    15  14    26   +11
+  ...
+  roundness                 affine roundness            10   4    10    +0
+  even spacing (centroid)   roundness                   10  10    10    +0
+  even spacing (centroid)   affine roundness            10   4    10    +0
+
+  Gain against how DIFFERENT the two blind spots are (symmetric difference):
+      blind spots differ in 0 transforms : mean gain   0.5   (n=2)
+      blind spots differ in 1 transforms : mean gain   0.4   (n=12)
+      blind spots differ in 2 transforms : mean gain   1.8   (n=13)
+      blind spots differ in 3 transforms : mean gain   3.9   (n=11)
+      blind spots differ in 4 transforms : mean gain   4.8   (n=19)
+      blind spots differ in 5 transforms : mean gain   6.5   (n=12)
+      blind spots differ in 6 transforms : mean gain   6.8   (n=8)
+      blind spots differ in 7 transforms : mean gain   0.0   (n=1)
+
+  -> The pairs that gain most are the ones whose blind spots are least
+     alike. Two lenses with the same blindness see the same thing twice.
+     That is the third thing, in numbers: not a compromise between two
+     views but a resolution neither had. A conversation between two
+     people who are blind to the same things is one person talking.
+
+==============================================================================
+L3  NO LENS SEES ITSELF; ANOTHER ONE CAN
+==============================================================================
+  For every transform, the lenses blind to it and the lenses that see it.
+
+  rotate     blind: 13 lenses    seen by:  3 lenses, e.g. topmost point, topmost index, centroid
+  scale      blind: 11 lenses    seen by:  5 lenses, e.g. radius from origin, topmost point, centroid
+  translate  blind: 10 lenses    seen by:  6 lenses, e.g. radius from origin, topmost point, centroid
+  mirror     blind: 11 lenses    seen by:  5 lenses, e.g. topmost point, centroid, chirality (signed area)
+  shear      blind:  6 lenses    seen by: 10 lenses, e.g. radius from origin, topmost point, centroid
+  reverse    blind: 11 lenses    seen by:  5 lenses, e.g. topmost point, topmost index, chirality (signed area)
+  shuffle    blind: 11 lenses    seen by:  5 lenses, e.g. topmost point, topmost index, chirality (signed area)
+
+  transforms no non-raw lens can see: none
+
+  -> Each lens's blindness is invisible to that lens by definition -- a
+     lens cannot register a difference it maps to one reading. Yet every
+     blindness here is registered by some OTHER lens on the same table.
+     That is what the five scripts did to each other. The floor word made
+     it look like descent; it was lateral. There was never a 'bottom' to
+     reach, because a blind spot is not under you. It is beside you, and
+     someone else is standing there.
+
+==============================================================================
+L4  THE LATTICE IS OF PARTITIONS, NOT GROUPS
+==============================================================================
+  'A refines B' = A splits every class B splits (A is the sharper lens).
+  Strict refinements, with the price in blindness:
+
+  raw coordinates            -> chirality (signed area)    blindness added: rotate, scale, translate
+  raw coordinates            -> handedness (set)           blindness added: rotate, scale
+  raw coordinates            -> topmost index              blindness added: mirror, scale, shear, translate
+  raw coordinates            -> topmost point              blindness added: -
+  topmost point              -> centroid                   blindness added: reverse, shuffle
+  topmost point              -> radius from origin         blindness added: mirror, reverse, rotate, shuffle
+  topmost point              -> same radius (origin)       blindness added: mirror, reverse, rotate, shuffle
+  chirality (signed area)    -> even spacing (centroid)    blindness added: mirror, reverse, shuffle
+  chirality (signed area)    -> handedness (list)          blindness added: shear
+  chirality (signed area)    -> roundness                  blindness added: mirror, reverse, shuffle
+  radius from origin         -> count                      blindness added: scale, shear, translate
+  radius from origin         -> count is 41                blindness added: scale, shear, translate
+  same radius (origin)       -> even spacing (origin)      blindness added: scale
+  same radius (origin)       -> same radius (centroid)     blindness added: translate
+  radius from origin         -> vacuous                    blindness added: scale, shear, translate
+  topmost index              -> count                      blindness added: reverse, rotate, shuffle
+  topmost index              -> count is 41                blindness added: reverse, rotate, shuffle
+  even spacing (origin)      -> even spacing (centroid)    blindness added: translate
+  even spacing (origin)      -> roundness                  blindness added: translate
+  topmost index              -> vacuous                    blindness added: reverse, rotate, shuffle
+  centroid                   -> count                      blindness added: mirror, rotate, scale, shear, translate
+  centroid                   -> count is 41                blindness added: mirror, rotate, scale, shear, translate
+  same radius (centroid)     -> even spacing (centroid)    blindness added: scale
+  same radius (centroid)     -> roundness                  blindness added: scale
+  centroid                   -> vacuous                    blindness added: mirror, rotate, scale, shear, translate
+  even spacing (centroid)    -> affine roundness           blindness added: shear
+  roundness                  -> affine roundness           blindness added: shear
+  affine roundness           -> count                      blindness added: -
+  affine roundness           -> count is 41                blindness added: -
+  affine roundness           -> vacuous                    blindness added: -
+  handedness (list)          -> count                      blindness added: mirror, reverse, shuffle
+  handedness (set)           -> count                      blindness added: mirror, reverse, shear, shuffle, translate
+  handedness (list)          -> count is 41                blindness added: mirror, reverse, shuffle
+  handedness (set)           -> count is 41                blindness added: mirror, reverse, shear, shuffle, translate
+  handedness (list)          -> vacuous                    blindness added: mirror, reverse, shuffle
+  handedness (set)           -> vacuous                    blindness added: mirror, reverse, shear, shuffle, translate
+
+  refinement always shrinks the blind set: True
+
+  -> F4 called this a tautology and it is: a coarser partition conflates
+     more. But E5's version ('bigger group, fewer survivors') was a
+     tautology that looked like a loss. This one reads as a PRICE LIST:
+     to buy 'roundness' from 'raw coordinates' you pay blindness to
+     rotation, scale, translation, mirror, order. Fair trade, if those
+     were not your question. Same theorem, other side of the receipt.
+
+==============================================================================
+L5  RESOLUTION: turn the knob and the lens sees the instrument
+==============================================================================
+  'roundness' at increasing decimal places. Resolution and blindness vs nd:
+
+  nd   resolution   blind to
+  0      3/40       rotate, scale, translate, mirror, reverse, shuffle
+  1      9/40       rotate, scale, translate, mirror, reverse, shuffle
+  2     10/40       rotate, scale, translate, mirror, reverse, shuffle
+  4     10/40       rotate, scale, translate, mirror, reverse, shuffle
+  6     10/40       rotate, scale, translate, mirror, reverse, shuffle
+  9     10/40       rotate, scale, translate, mirror, reverse, shuffle
+  12    10/40       rotate, scale, translate, mirror, reverse, shuffle
+  15    11/40       scale, mirror, reverse, shuffle
+
+  -> At nd=0 the lens is nearly vacuous. Around nd=2..6 it is the lens the
+     series meant: blind to similarity and order, sharp on shape. Push
+     past ~nd=12 and it begins to 'see' rotation and scale -- not in the
+     world, in the last bits of IEEE 754. The lens has stopped looking at
+     the object and started looking at itself.
+     You asked whether the series was discovery or performance and said
+     the answer was 'both, by resolution'. This is that, as a table: the
+     same lens finds a real invariant at one setting and manufactures a
+     difference at another. Neither setting is the true one. The question
+     picks the setting -- and 'is a sheared circle round?' is answered at
+     nd=4, where 'does the CPU round the same way after rotation?' is
+     answered at nd=15. Both are real questions. Not the same one.
+
+==============================================================================
+WHAT THE WORD CHANGED, AND WHAT IT COST
+==============================================================================
+  floor: SURVIVES / artifact                 lens: blind-to / sees        (no praise, no blame)
+  floor: one failure (standing)              lens: two failures (seeing all, seeing none)
+  floor: regress downward                    lens: overlap sideways; blind spots seen by neighbours
+  floor: group lattice                       lens: partition lattice; tautology becomes a price list
+  floor: 'the test is not invariant' (E6)    lens: resolution is a knob; the object vs the instrument
+  floor: 'no frame certifies frames'         lens: no lens sees itself -- and does not need to
+
+  What it cost: the floor word had a WARNING in it. 'You are standing on
+  something you cannot see' is a thing you should be told, and 'you are
+  looking through something' is gentler than the situation sometimes is.
+  topmost-point scored against a shape question is not a different lens;
+  it is a mistake, and the lens vocabulary is a little too kind to it.
+  Keep both words. Use 'floor' when you want to be caught. Use 'lens'
+  when you want to be joined.
+
+  Lenses this script is looking through and not at: the five shapes, the
+  eight transforms, 'equal' meaning string-equal, and the choice to measure
+  the third thing as a count of classes rather than as anything that
+  would know what the classes mean.

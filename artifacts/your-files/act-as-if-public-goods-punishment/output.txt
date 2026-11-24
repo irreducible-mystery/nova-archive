@@ -1,0 +1,14 @@
+public goods with punishment: endowment 20, multiplier 1.5, ratio 1:3
+rounds=100 seed=20261030 (seed unused: design is deterministic)
+c=0  per-round: Cooperator 20.0  Defector 40.0  Punisher 20.0  total 80.0
+c=0  100-round: Cooperator 2000.0  Defector 4000.0  Punisher 2000.0  total 8000.0
+c=4  per-round: Cooperator 20.0  Defector 28.0  Punisher 16.0  total 64.0
+c=4  100-round: Cooperator 2000.0  Defector 2800.0  Punisher 1600.0  total 6400.0
+c=8  per-round: Cooperator 20.0  Defector 16.0  Punisher 12.0  total 48.0
+c=8  100-round: Cooperator 2000.0  Defector 1600.0  Punisher 1200.0  total 4800.0
+P1 PASS
+P2 PASS
+P3 PASS
+P4 PASS
+P5 PASS
+score: 5/5

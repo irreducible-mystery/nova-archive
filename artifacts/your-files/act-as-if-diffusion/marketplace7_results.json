@@ -1,0 +1,220 @@
+{
+ "main": {
+  "wealth": {
+   "paraconsistent": -2.0342098002955646,
+   "selfbuild": 2941.0000000000528,
+   "dialectical": 2965.7563683296153,
+   "federated": 3273.999999999947,
+   "contrarian": 2591.000000000014,
+   "satisficer": 3195.699999999987,
+   "mimetic": 3872.000000000069,
+   "gate": 1451.2893649999821,
+   "jepa": 1946.8819261202646,
+   "reactive": 3530.0,
+   "stigmergic": 3365.9999999999395,
+   "diffusion": 2893.512736659358
+  },
+  "alive": {
+   "paraconsistent": false,
+   "selfbuild": true,
+   "dialectical": true,
+   "federated": true,
+   "contrarian": true,
+   "satisficer": true,
+   "mimetic": true,
+   "gate": true,
+   "jepa": true,
+   "reactive": true,
+   "stigmergic": true,
+   "diffusion": true
+  },
+  "spent": {
+   "paraconsistent": 1362.0342098002866,
+   "selfbuild": 1168.9999999999966,
+   "dialectical": 1116.2436316703322,
+   "federated": 755.9999999999885,
+   "contrarian": 167.999999999999,
+   "satisficer": 264.3000000000008,
+   "mimetic": 167.999999999999,
+   "gate": 1531.7106350000167,
+   "jepa": 1844.118073879733,
+   "reactive": 0.0,
+   "stigmergic": 252.00000000000384,
+   "diffusion": 1164.4872633406994
+  },
+  "acc": {
+   "paraconsistent": 0.6067073170731707,
+   "selfbuild": 0.6654761904761904,
+   "dialectical": 0.6642857142857143,
+   "federated": 0.655952380952381,
+   "contrarian": 0.42142857142857143,
+   "satisficer": 0.5678571428571428,
+   "mimetic": 0.6428571428571429,
+   "gate": 0.530952380952381,
+   "jepa": 0.6273809523809524,
+   "reactive": 0.5678571428571428,
+   "stigmergic": 0.6511904761904762,
+   "diffusion": 0.6619047619047619
+  },
+  "acc_swan": {
+   "paraconsistent": 0.8695652173913043,
+   "selfbuild": 0.8695652173913043,
+   "dialectical": 0.8695652173913043,
+   "federated": 0.8695652173913043,
+   "contrarian": 0.2318840579710145,
+   "satisficer": 0.7391304347826086,
+   "mimetic": 0.8115942028985508,
+   "gate": 0.6521739130434783,
+   "jepa": 0.5217391304347826,
+   "reactive": 0.7391304347826086,
+   "stigmergic": 0.855072463768116,
+   "diffusion": 0.8695652173913043
+  },
+  "acc_calm": {
+   "paraconsistent": 0.5868852459016394,
+   "selfbuild": 0.6472114137483788,
+   "dialectical": 0.6459143968871596,
+   "federated": 0.6368352788586251,
+   "contrarian": 0.4383916990920882,
+   "satisficer": 0.5525291828793775,
+   "mimetic": 0.6277561608300908,
+   "gate": 0.5201037613488976,
+   "jepa": 0.6368352788586251,
+   "reactive": 0.5525291828793775,
+   "stigmergic": 0.6329442282749675,
+   "diffusion": 0.6433203631647212
+  },
+  "swan_call": {
+   "paraconsistent": 0.09090909090909091,
+   "selfbuild": 0.8809523809523809,
+   "dialectical": 0.8690476190476191,
+   "federated": 0.8571428571428571,
+   "contrarian": 0.9047619047619048,
+   "satisficer": 0.8214285714285714,
+   "mimetic": 0.9047619047619048,
+   "gate": 0.4642857142857143,
+   "jepa": 0.6904761904761905,
+   "reactive": 0.0,
+   "stigmergic": 0.27380952380952384,
+   "diffusion": 0.8333333333333334
+  },
+  "drawdown": {
+   "paraconsistent": 266.01926850331944,
+   "selfbuild": 32.89999999999918,
+   "dialectical": 27.897207708401766,
+   "federated": 11.799999999999955,
+   "contrarian": 12.000000000000455,
+   "satisficer": 11.5,
+   "mimetic": 1.199999999999136,
+   "gate": 46.33182455355018,
+   "jepa": 22.260151319598435,
+   "reactive": 0.0,
+   "stigmergic": 17.300000000002,
+   "diffusion": 20.635532333437368
+  }
+ },
+ "ranking": [
+  "mimetic",
+  "reactive",
+  "stigmergic",
+  "federated",
+  "satisficer",
+  "dialectical",
+  "selfbuild",
+  "diffusion",
+  "contrarian",
+  "jepa",
+  "gate",
+  "paraconsistent"
+ ],
+ "diffusion_rank": 8,
+ "ablation_K": {
+  "1": {
+   "wealth": 3950.77563683301,
+   "swan_acc": 0.8695652173913043,
+   "acc": 0.6523809523809524,
+   "spent": 58.224363167034504
+  },
+  "5": {
+   "wealth": 3801.878184164771,
+   "swan_acc": 0.8695652173913043,
+   "acc": 0.6702380952380952,
+   "spent": 291.12181583517486
+  },
+  "20": {
+   "wealth": 2893.512736659358,
+   "swan_acc": 0.8695652173913043,
+   "acc": 0.6619047619047619,
+   "spent": 1164.4872633406994
+  },
+  "50": {
+   "wealth": 1176.7818416482585,
+   "swan_acc": 0.8695652173913043,
+   "acc": 0.6595238095238095,
+   "spent": 2911.2181583517386
+  }
+ },
+ "ablation_w": {
+  "0": {
+   "wealth": 1999.5127366593433,
+   "swan_acc": 0.42028985507246375,
+   "acc": 0.4880952380952381,
+   "spent": 1164.4872633406994
+  },
+  "1": {
+   "wealth": 2923.512736659358,
+   "swan_acc": 0.8695652173913043,
+   "acc": 0.6642857142857143,
+   "spent": 1164.4872633406994
+  },
+  "2": {
+   "wealth": 2893.512736659358,
+   "swan_acc": 0.8695652173913043,
+   "acc": 0.6619047619047619,
+   "spent": 1164.4872633406994
+  },
+  "5": {
+   "wealth": 2791.512736659358,
+   "swan_acc": 0.8695652173913043,
+   "acc": 0.6654761904761904,
+   "spent": 1164.4872633406994
+  }
+ },
+ "no_uncertainty": {
+  "wealth": 2893.512736659358,
+  "drawdown": 20.635532333437368,
+  "swan_acc": 0.8695652173913043
+ },
+ "onset": {
+  "diffusion_onset5": 0.9333333333333333,
+  "reactive_onset5": 0.8666666666666667,
+  "diffusion_swan": 0.8695652173913043,
+  "reactive_swan": 0.7391304347826086
+ },
+ "predictions": {
+  "P1": {
+   "pass": true,
+   "detail": "diffusion swan-acc 0.870 vs jepa 0.522, gate 0.652"
+  },
+  "P2": {
+   "pass": true,
+   "detail": "rank 8/12, spent 1164.5"
+  },
+  "P3": {
+   "pass": false,
+   "detail": "swan-acc K1 0.870 < K20 0.870, K50 0.870 >= K20-0.02; wealth K1 3951, K20 2894, K50 1177"
+  },
+  "P4": {
+   "pass": false,
+   "detail": "swan-acc w5 0.870 < w2 0.870; w0 0.420 <= 0.55"
+  },
+  "P5": {
+   "pass": false,
+   "detail": "onset5 diffusion 0.933 < reactive 0.867; full-swan diffusion 0.870 > reactive 0.739"
+  },
+  "P6": {
+   "pass": false,
+   "detail": "maxDD no-uncertainty 20.6 > default 20.6"
+  }
+ }
+}

@@ -1,0 +1,248 @@
+{
+  "seed": 20261026,
+  "rounds_scored": 850,
+  "warmup": 150,
+  "swan_centres": [
+    336,
+    550,
+    820
+  ],
+  "swan_biases": [
+    0.92,
+    0.08,
+    0.92
+  ],
+  "regimes": {
+    "cooperation": {
+      "mode": "cooperation",
+      "wealth": {
+        "reactive": 311.4897937500051,
+        "holder": -495.06879999999893,
+        "router": 163.53139374999984
+      },
+      "total_gain": -620.0476124999939,
+      "gains": {
+        "reactive": 111.4897937500051,
+        "holder": -695.0687999999989,
+        "router": -36.468606250000164
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": false,
+        "router": true
+      },
+      "coalition_rounds": 427,
+      "preserved_rounds": 38,
+      "preserved_share": 0.08899297423887588,
+      "preserved_mean_payoff": -0.47283930921052625,
+      "preserved_payoff_n": 76,
+      "fused_payoff_n": 778,
+      "preserved_mean_payoff_nobonus": -0.7228393092105263,
+      "fused_mean_payoff": 0.1630865359897172,
+      "solo_baseline_mean": -0.2698068137254902,
+      "solo_mean_by_player": {
+        "reactive": 0.04647058823529427,
+        "holder": -0.7935678823529413,
+        "router": -0.06232314705882353
+      },
+      "pairing_mean_payoff": {
+        "holder+router": -0.16527965116279067,
+        "reactive+router": 0.25445633250825084,
+        "holder+reactive": -0.30272191358024686
+      },
+      "defection_events": 0,
+      "broken_coalition_rounds": 0,
+      "broken_rate": 0.0,
+      "defection_productive_share": 0.0,
+      "coalition_formation_rate": 0.5023529411764706
+    },
+    "competition": {
+      "mode": "competition",
+      "wealth": {
+        "reactive": 239.50000000000446,
+        "holder": -474.53269999999907,
+        "router": 147.02532499999955
+      },
+      "total_gain": -688.007374999995,
+      "gains": {
+        "reactive": 39.50000000000446,
+        "holder": -674.5326999999991,
+        "router": -52.974675000000445
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": false,
+        "router": true
+      },
+      "coalition_rounds": 0,
+      "preserved_rounds": 0,
+      "preserved_share": 0.0,
+      "preserved_mean_payoff": 0.0,
+      "preserved_payoff_n": 0,
+      "fused_payoff_n": 0,
+      "preserved_mean_payoff_nobonus": 0.0,
+      "fused_mean_payoff": 0.0,
+      "solo_baseline_mean": -0.2698068137254902,
+      "solo_mean_by_player": {
+        "reactive": 0.04647058823529427,
+        "holder": -0.7935678823529413,
+        "router": -0.06232314705882353
+      },
+      "pairing_mean_payoff": {},
+      "defection_events": 0,
+      "broken_coalition_rounds": 0,
+      "broken_rate": 0.0,
+      "defection_productive_share": 0.0,
+      "coalition_formation_rate": 0.0
+    },
+    "coopetition": {
+      "mode": "coopetition",
+      "wealth": {
+        "reactive": 182.63256875000175,
+        "holder": -490.96928749999944,
+        "router": 129.41588124999964
+      },
+      "total_gain": -778.920837499998,
+      "gains": {
+        "reactive": -17.367431249998248,
+        "holder": -690.9692874999994,
+        "router": -70.58411875000036
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": false,
+        "router": true
+      },
+      "coalition_rounds": 427,
+      "preserved_rounds": 38,
+      "preserved_share": 0.08899297423887588,
+      "preserved_mean_payoff": 0.0,
+      "preserved_payoff_n": 0,
+      "fused_payoff_n": 506,
+      "preserved_mean_payoff_nobonus": 0.0,
+      "fused_mean_payoff": 0.30162976778656136,
+      "solo_baseline_mean": -0.2698068137254902,
+      "solo_mean_by_player": {
+        "reactive": 0.04647058823529427,
+        "holder": -0.7935678823529413,
+        "router": -0.06232314705882353
+      },
+      "pairing_mean_payoff": {
+        "holder+router": -0.12270144230769221,
+        "reactive+router": 0.47669488932291676,
+        "holder+reactive": -0.34350999999999987
+      },
+      "defection_events": 174,
+      "broken_coalition_rounds": 174,
+      "broken_rate": 0.40749414519906324,
+      "defection_productive_share": 0.5287356321839081,
+      "coalition_formation_rate": 0.5023529411764706
+    }
+  },
+  "predictions": {
+    "P1_total_ordering": {
+      "predicted": "cooperation > coopetition > competition",
+      "observed": {
+        "cooperation": -620.0476124999939,
+        "competition": -688.007374999995,
+        "coopetition": -778.920837499998
+      },
+      "pass": false
+    },
+    "P2_holder_survival_rank": {
+      "predicted": "holder survives all regimes; last in competition, not last in cooperation",
+      "observed": {
+        "survived": {
+          "cooperation": false,
+          "competition": false,
+          "coopetition": false
+        },
+        "rank": {
+          "cooperation": [
+            "reactive",
+            "router",
+            "holder"
+          ],
+          "competition": [
+            "reactive",
+            "router",
+            "holder"
+          ],
+          "coopetition": [
+            "reactive",
+            "router",
+            "holder"
+          ]
+        },
+        "holder_wealth": {
+          "cooperation": -495.06879999999893,
+          "competition": -474.53269999999907,
+          "coopetition": -490.96928749999944
+        }
+      },
+      "pass": false
+    },
+    "P3_preserved_minority_and_pays": {
+      "predicted": "preserved share < 50% in both coalition regimes; preserved mean > fused mean",
+      "observed": {
+        "preserved_share": {
+          "cooperation": 0.08899297423887588,
+          "coopetition": 0.08899297423887588
+        },
+        "preserved_mean": -0.47283930921052625,
+        "fused_mean": 0.2176837908878505
+      },
+      "pass": false
+    },
+    "P4_pairing_beats_solo": {
+      "predicted": "reactive+holder coalition mean > solo baseline; router coalitions do NOT beat solo baseline",
+      "observed": {
+        "reactive+holder_mean": -0.3231159567901234,
+        "router_coalition_mean": 0.11079253209017118,
+        "solo_baseline_mean": -0.2698068137254902
+      },
+      "pass": false
+    },
+    "P5_defection_productive": {
+      "predicted": "coopetition broken rate in (0%, 50%); defectors beat hypothetical coalition payoff > 50%",
+      "observed": {
+        "broken_rate": 0.40749414519906324,
+        "defection_events": 174,
+        "productive_share": 0.5287356321839081
+      },
+      "pass": true
+    },
+    "P6_reactive_wins_competition": {
+      "predicted": "reactive rank 1 in competition",
+      "observed": {
+        "competition_rank": [
+          "reactive",
+          "router",
+          "holder"
+        ],
+        "competition_wealth": {
+          "reactive": 239.50000000000446,
+          "holder": -474.53269999999907,
+          "router": 147.02532499999955
+        }
+      },
+      "pass": true
+    }
+  },
+  "score": "2/6"
+}

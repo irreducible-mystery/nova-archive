@@ -1,0 +1,1622 @@
+{
+  "seed": 20261026,
+  "rounds_scored": 850,
+  "warmup": 150,
+  "swan_centres": [
+    336,
+    550,
+    820
+  ],
+  "swan_biases": [
+    0.92,
+    0.08,
+    0.92
+  ],
+  "runs": {
+    "v3_stipend__cooperation": {
+      "mode": "cooperation",
+      "holder_kind": "v3_stipend",
+      "wealth": {
+        "reactive": 304.27650000000574,
+        "holder": 176.83769999999745,
+        "router": 206.5703999999998
+      },
+      "gain": {
+        "reactive": 104.27650000000574,
+        "holder": -23.162300000002546,
+        "router": 6.5703999999998075
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": true,
+        "router": true
+      },
+      "first_negative": {},
+      "holder_mean_payoff_excl_stipend": -0.08901447058823832,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.06280354014598853,
+        "swan": -0.1961310000000024,
+        "postflip": -0.19924500000000273
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [
+        {
+          "round": 210,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.0559,
+          "holding_rounds_before": 60,
+          "false_streak": 25
+        },
+        {
+          "round": 289,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2331,
+          "holding_rounds_before": 54,
+          "false_streak": 25
+        },
+        {
+          "round": 339,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5315,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 389,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5752,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 444,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2823,
+          "holding_rounds_before": 30,
+          "false_streak": 25
+        },
+        {
+          "round": 514,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1843,
+          "holding_rounds_before": 45,
+          "false_streak": 25
+        },
+        {
+          "round": 575,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1708,
+          "holding_rounds_before": 36,
+          "false_streak": 25
+        },
+        {
+          "round": 705,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1408,
+          "holding_rounds_before": 105,
+          "false_streak": 25
+        },
+        {
+          "round": 755,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.377,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 805,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4584,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 872,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.199,
+          "holding_rounds_before": 42,
+          "false_streak": 25
+        },
+        {
+          "round": 922,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4413,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 972,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5418,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        }
+      ],
+      "collapse_count": 13,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 13,
+      "holding_share": 0.6176470588235294,
+      "holding_by_kind": {
+        "calm": 426,
+        "swan": 42,
+        "postflip": 57
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 0.621897810218978,
+        "swan": 0.56,
+        "postflip": 0.6333333333333333
+      },
+      "collapse_winner_M": 13,
+      "collapse_winner_m": 0,
+      "holding_rounds": 525,
+      "collapsed_rounds": 325,
+      "total_stipend": 52.500000000000476,
+      "holder_gain_excl_stipend": -75.66230000000303,
+      "router_consultation": {
+        "postflip": 0.3333333333333333,
+        "calm": 0.5982532751091703,
+        "swan": 0.4166666666666667
+      },
+      "router_attempts": {
+        "postflip": [
+          30,
+          10
+        ],
+        "calm": [
+          229,
+          137
+        ],
+        "swan": [
+          24,
+          10
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.33962264150943394,
+        "calm": 0.662613981762918,
+        "swan": 0.46153846153846156
+      }
+    },
+    "v3_stipend__coopetition": {
+      "mode": "coopetition",
+      "holder_kind": "v3_stipend",
+      "wealth": {
+        "reactive": 214.22655000000185,
+        "holder": 123.67477499999775,
+        "router": 184.99902500000024
+      },
+      "gain": {
+        "reactive": 14.22655000000185,
+        "holder": -76.32522500000225,
+        "router": -15.000974999999755
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": true,
+        "router": true
+      },
+      "first_negative": {},
+      "holder_mean_payoff_excl_stipend": -0.1515590882352968,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.1158360583941631,
+        "swan": -0.3835003333333358,
+        "postflip": -0.23016666666667066
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [
+        {
+          "round": 210,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.0559,
+          "holding_rounds_before": 60,
+          "false_streak": 25
+        },
+        {
+          "round": 289,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2331,
+          "holding_rounds_before": 54,
+          "false_streak": 25
+        },
+        {
+          "round": 339,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5315,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 389,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5752,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 444,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2823,
+          "holding_rounds_before": 30,
+          "false_streak": 25
+        },
+        {
+          "round": 514,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1843,
+          "holding_rounds_before": 45,
+          "false_streak": 25
+        },
+        {
+          "round": 575,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1708,
+          "holding_rounds_before": 36,
+          "false_streak": 25
+        },
+        {
+          "round": 705,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1408,
+          "holding_rounds_before": 105,
+          "false_streak": 25
+        },
+        {
+          "round": 755,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.377,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 805,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4584,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 872,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.199,
+          "holding_rounds_before": 42,
+          "false_streak": 25
+        },
+        {
+          "round": 922,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4413,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 972,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5418,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        }
+      ],
+      "collapse_count": 13,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 13,
+      "holding_share": 0.6176470588235294,
+      "holding_by_kind": {
+        "calm": 426,
+        "swan": 42,
+        "postflip": 57
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 0.621897810218978,
+        "swan": 0.56,
+        "postflip": 0.6333333333333333
+      },
+      "collapse_winner_M": 13,
+      "collapse_winner_m": 0,
+      "holding_rounds": 525,
+      "collapsed_rounds": 325,
+      "total_stipend": 52.500000000000476,
+      "holder_gain_excl_stipend": -128.82522500000272,
+      "router_consultation": {
+        "postflip": 0.3333333333333333,
+        "calm": 0.5982532751091703,
+        "swan": 0.4166666666666667
+      },
+      "router_attempts": {
+        "postflip": [
+          30,
+          10
+        ],
+        "calm": [
+          229,
+          137
+        ],
+        "swan": [
+          24,
+          10
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.33962264150943394,
+        "calm": 0.662613981762918,
+        "swan": 0.46153846153846156
+      }
+    },
+    "v3_stipend__competition": {
+      "mode": "competition",
+      "holder_kind": "v3_stipend",
+      "wealth": {
+        "reactive": 239.50000000000446,
+        "holder": 36.01299999999798,
+        "router": 214.52300000000008
+      },
+      "gain": {
+        "reactive": 39.50000000000446,
+        "holder": -163.987000000002,
+        "router": 14.523000000000081
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": true,
+        "router": true
+      },
+      "first_negative": {},
+      "holder_mean_payoff_excl_stipend": -0.2546905882352965,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.19787562043795845,
+        "swan": -0.5939760000000033,
+        "postflip": -0.4043777777777805
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [
+        {
+          "round": 210,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.0559,
+          "holding_rounds_before": 60,
+          "false_streak": 25
+        },
+        {
+          "round": 289,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2331,
+          "holding_rounds_before": 54,
+          "false_streak": 25
+        },
+        {
+          "round": 339,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5315,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 389,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5752,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 444,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2823,
+          "holding_rounds_before": 30,
+          "false_streak": 25
+        },
+        {
+          "round": 514,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1843,
+          "holding_rounds_before": 45,
+          "false_streak": 25
+        },
+        {
+          "round": 575,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1708,
+          "holding_rounds_before": 36,
+          "false_streak": 25
+        },
+        {
+          "round": 705,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1408,
+          "holding_rounds_before": 105,
+          "false_streak": 25
+        },
+        {
+          "round": 755,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.377,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 805,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4584,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 872,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.199,
+          "holding_rounds_before": 42,
+          "false_streak": 25
+        },
+        {
+          "round": 922,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4413,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 972,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5418,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        }
+      ],
+      "collapse_count": 13,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 13,
+      "holding_share": 0.6176470588235294,
+      "holding_by_kind": {
+        "calm": 426,
+        "swan": 42,
+        "postflip": 57
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 0.621897810218978,
+        "swan": 0.56,
+        "postflip": 0.6333333333333333
+      },
+      "collapse_winner_M": 13,
+      "collapse_winner_m": 0,
+      "holding_rounds": 525,
+      "collapsed_rounds": 325,
+      "total_stipend": 52.500000000000476,
+      "holder_gain_excl_stipend": -216.4870000000025,
+      "router_consultation": {
+        "postflip": 0.0,
+        "calm": 0.0,
+        "swan": 0.0
+      },
+      "router_attempts": {
+        "postflip": [
+          0,
+          0
+        ],
+        "calm": [
+          0,
+          0
+        ],
+        "swan": [
+          0,
+          0
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.0,
+        "calm": 0.0,
+        "swan": 0.0
+      }
+    },
+    "v3_nostipend__cooperation": {
+      "mode": "cooperation",
+      "holder_kind": "v3_nostipend",
+      "wealth": {
+        "reactive": 304.27650000000574,
+        "holder": 124.33770000000023,
+        "router": 206.5703999999998
+      },
+      "gain": {
+        "reactive": 104.27650000000574,
+        "holder": -75.66229999999977,
+        "router": 6.5703999999998075
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": true,
+        "router": true
+      },
+      "first_negative": {},
+      "holder_mean_payoff_excl_stipend": -0.08901447058823503,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.06280354014598513,
+        "swan": -0.19613099999999822,
+        "postflip": -0.19924500000000098
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [
+        {
+          "round": 210,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.0559,
+          "holding_rounds_before": 60,
+          "false_streak": 25
+        },
+        {
+          "round": 289,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2331,
+          "holding_rounds_before": 54,
+          "false_streak": 25
+        },
+        {
+          "round": 339,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5315,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 389,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5752,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 444,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2823,
+          "holding_rounds_before": 30,
+          "false_streak": 25
+        },
+        {
+          "round": 514,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1843,
+          "holding_rounds_before": 45,
+          "false_streak": 25
+        },
+        {
+          "round": 575,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1708,
+          "holding_rounds_before": 36,
+          "false_streak": 25
+        },
+        {
+          "round": 705,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1408,
+          "holding_rounds_before": 105,
+          "false_streak": 25
+        },
+        {
+          "round": 755,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.377,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 805,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4584,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 872,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.199,
+          "holding_rounds_before": 42,
+          "false_streak": 25
+        },
+        {
+          "round": 922,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4413,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 972,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5418,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        }
+      ],
+      "collapse_count": 13,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 13,
+      "holding_share": 0.6176470588235294,
+      "holding_by_kind": {
+        "calm": 426,
+        "swan": 42,
+        "postflip": 57
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 0.621897810218978,
+        "swan": 0.56,
+        "postflip": 0.6333333333333333
+      },
+      "collapse_winner_M": 13,
+      "collapse_winner_m": 0,
+      "holding_rounds": 525,
+      "collapsed_rounds": 325,
+      "total_stipend": 0.0,
+      "holder_gain_excl_stipend": -75.66229999999977,
+      "router_consultation": {
+        "postflip": 0.3333333333333333,
+        "calm": 0.5982532751091703,
+        "swan": 0.4166666666666667
+      },
+      "router_attempts": {
+        "postflip": [
+          30,
+          10
+        ],
+        "calm": [
+          229,
+          137
+        ],
+        "swan": [
+          24,
+          10
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.33962264150943394,
+        "calm": 0.662613981762918,
+        "swan": 0.46153846153846156
+      }
+    },
+    "v3_nostipend__coopetition": {
+      "mode": "coopetition",
+      "holder_kind": "v3_nostipend",
+      "wealth": {
+        "reactive": 214.22655000000185,
+        "holder": 71.17477500000052,
+        "router": 184.99902500000024
+      },
+      "gain": {
+        "reactive": 14.22655000000185,
+        "holder": -128.82522499999948,
+        "router": -15.000974999999755
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": true,
+        "router": true
+      },
+      "first_negative": {},
+      "holder_mean_payoff_excl_stipend": -0.15155908823529352,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.11583605839415988,
+        "swan": -0.38350033333333217,
+        "postflip": -0.23016666666666719
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [
+        {
+          "round": 210,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.0559,
+          "holding_rounds_before": 60,
+          "false_streak": 25
+        },
+        {
+          "round": 289,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2331,
+          "holding_rounds_before": 54,
+          "false_streak": 25
+        },
+        {
+          "round": 339,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5315,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 389,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5752,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 444,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2823,
+          "holding_rounds_before": 30,
+          "false_streak": 25
+        },
+        {
+          "round": 514,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1843,
+          "holding_rounds_before": 45,
+          "false_streak": 25
+        },
+        {
+          "round": 575,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1708,
+          "holding_rounds_before": 36,
+          "false_streak": 25
+        },
+        {
+          "round": 705,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1408,
+          "holding_rounds_before": 105,
+          "false_streak": 25
+        },
+        {
+          "round": 755,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.377,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 805,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4584,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 872,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.199,
+          "holding_rounds_before": 42,
+          "false_streak": 25
+        },
+        {
+          "round": 922,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4413,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 972,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5418,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        }
+      ],
+      "collapse_count": 13,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 13,
+      "holding_share": 0.6176470588235294,
+      "holding_by_kind": {
+        "calm": 426,
+        "swan": 42,
+        "postflip": 57
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 0.621897810218978,
+        "swan": 0.56,
+        "postflip": 0.6333333333333333
+      },
+      "collapse_winner_M": 13,
+      "collapse_winner_m": 0,
+      "holding_rounds": 525,
+      "collapsed_rounds": 325,
+      "total_stipend": 0.0,
+      "holder_gain_excl_stipend": -128.82522499999948,
+      "router_consultation": {
+        "postflip": 0.3333333333333333,
+        "calm": 0.5982532751091703,
+        "swan": 0.4166666666666667
+      },
+      "router_attempts": {
+        "postflip": [
+          30,
+          10
+        ],
+        "calm": [
+          229,
+          137
+        ],
+        "swan": [
+          24,
+          10
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.33962264150943394,
+        "calm": 0.662613981762918,
+        "swan": 0.46153846153846156
+      }
+    },
+    "v3_nostipend__competition": {
+      "mode": "competition",
+      "holder_kind": "v3_nostipend",
+      "wealth": {
+        "reactive": 239.50000000000446,
+        "holder": -16.48699999999946,
+        "router": 214.52300000000008
+      },
+      "gain": {
+        "reactive": 39.50000000000446,
+        "holder": -216.48699999999945,
+        "router": 14.523000000000081
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": false,
+        "router": true
+      },
+      "first_negative": {
+        "holder": 827
+      },
+      "holder_mean_payoff_excl_stipend": -0.2546905882352935,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.1978756204379555,
+        "swan": -0.5939759999999988,
+        "postflip": -0.404377777777778
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [
+        {
+          "round": 210,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.0559,
+          "holding_rounds_before": 60,
+          "false_streak": 25
+        },
+        {
+          "round": 289,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2331,
+          "holding_rounds_before": 54,
+          "false_streak": 25
+        },
+        {
+          "round": 339,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5315,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 389,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5752,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 444,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.2823,
+          "holding_rounds_before": 30,
+          "false_streak": 25
+        },
+        {
+          "round": 514,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1843,
+          "holding_rounds_before": 45,
+          "false_streak": 25
+        },
+        {
+          "round": 575,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1708,
+          "holding_rounds_before": 36,
+          "false_streak": 25
+        },
+        {
+          "round": 705,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.1408,
+          "holding_rounds_before": 105,
+          "false_streak": 25
+        },
+        {
+          "round": 755,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.377,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 805,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4584,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 872,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.199,
+          "holding_rounds_before": 42,
+          "false_streak": 25
+        },
+        {
+          "round": 922,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.4413,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        },
+        {
+          "round": 972,
+          "trigger": "flip_stale",
+          "winner": "M",
+          "brier_gap": 0.5418,
+          "holding_rounds_before": 25,
+          "false_streak": 25
+        }
+      ],
+      "collapse_count": 13,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 13,
+      "holding_share": 0.6176470588235294,
+      "holding_by_kind": {
+        "calm": 426,
+        "swan": 42,
+        "postflip": 57
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 0.621897810218978,
+        "swan": 0.56,
+        "postflip": 0.6333333333333333
+      },
+      "collapse_winner_M": 13,
+      "collapse_winner_m": 0,
+      "holding_rounds": 525,
+      "collapsed_rounds": 325,
+      "total_stipend": 0.0,
+      "holder_gain_excl_stipend": -216.48699999999945,
+      "router_consultation": {
+        "postflip": 0.0,
+        "calm": 0.0,
+        "swan": 0.0
+      },
+      "router_attempts": {
+        "postflip": [
+          0,
+          0
+        ],
+        "calm": [
+          0,
+          0
+        ],
+        "swan": [
+          0,
+          0
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.0,
+        "calm": 0.0,
+        "swan": 0.0
+      }
+    },
+    "v1__cooperation": {
+      "mode": "cooperation",
+      "holder_kind": "v1",
+      "wealth": {
+        "reactive": 311.4897937500051,
+        "holder": -495.06879999999893,
+        "router": 163.53139374999984
+      },
+      "gain": {
+        "reactive": 111.4897937500051,
+        "holder": -695.0687999999989,
+        "router": -36.468606250000164
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": false,
+        "router": true
+      },
+      "first_negative": {
+        "holder": 397
+      },
+      "holder_mean_payoff_excl_stipend": -0.8177279999999988,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.8592841788321153,
+        "swan": -0.3822758333333356,
+        "postflip": -0.8643161111111092
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [],
+      "collapse_count": 0,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 0,
+      "holding_share": 1.0,
+      "holding_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 1.0,
+        "swan": 1.0,
+        "postflip": 1.0
+      },
+      "collapse_winner_M": 0,
+      "collapse_winner_m": 0,
+      "holding_rounds": 850,
+      "collapsed_rounds": 0,
+      "total_stipend": 0.0,
+      "holder_gain_excl_stipend": -695.0687999999989,
+      "router_consultation": {
+        "postflip": 0.0,
+        "calm": 0.23580786026200873,
+        "swan": 0.20833333333333334
+      },
+      "router_attempts": {
+        "postflip": [
+          30,
+          0
+        ],
+        "calm": [
+          229,
+          54
+        ],
+        "swan": [
+          24,
+          5
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.05555555555555555,
+        "calm": 0.3253731343283582,
+        "swan": 0.3157894736842105
+      }
+    },
+    "v1__coopetition": {
+      "mode": "coopetition",
+      "holder_kind": "v1",
+      "wealth": {
+        "reactive": 182.63256875000175,
+        "holder": -490.96928749999944,
+        "router": 129.41588124999964
+      },
+      "gain": {
+        "reactive": -17.367431249998248,
+        "holder": -690.9692874999994,
+        "router": -70.58411875000036
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": false,
+        "router": true
+      },
+      "first_negative": {
+        "holder": 393
+      },
+      "holder_mean_payoff_excl_stipend": -0.8129050441176463,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.849476760948904,
+        "swan": -0.3669480833333356,
+        "postflip": -0.906184444444444
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [],
+      "collapse_count": 0,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 0,
+      "holding_share": 1.0,
+      "holding_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 1.0,
+        "swan": 1.0,
+        "postflip": 1.0
+      },
+      "collapse_winner_M": 0,
+      "collapse_winner_m": 0,
+      "holding_rounds": 850,
+      "collapsed_rounds": 0,
+      "total_stipend": 0.0,
+      "holder_gain_excl_stipend": -690.9692874999994,
+      "router_consultation": {
+        "postflip": 0.0,
+        "calm": 0.23580786026200873,
+        "swan": 0.20833333333333334
+      },
+      "router_attempts": {
+        "postflip": [
+          30,
+          0
+        ],
+        "calm": [
+          229,
+          54
+        ],
+        "swan": [
+          24,
+          5
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.05555555555555555,
+        "calm": 0.3253731343283582,
+        "swan": 0.3157894736842105
+      }
+    },
+    "v1__competition": {
+      "mode": "competition",
+      "holder_kind": "v1",
+      "wealth": {
+        "reactive": 239.50000000000446,
+        "holder": -474.53269999999907,
+        "router": 147.02532499999955
+      },
+      "gain": {
+        "reactive": 39.50000000000446,
+        "holder": -674.5326999999991,
+        "router": -52.974675000000445
+      },
+      "rank": [
+        "reactive",
+        "router",
+        "holder"
+      ],
+      "survived": {
+        "reactive": true,
+        "holder": false,
+        "router": true
+      },
+      "first_negative": {
+        "holder": 397
+      },
+      "holder_mean_payoff_excl_stipend": -0.7935678823529401,
+      "holder_mean_payoff_by_kind": {
+        "calm": -0.8280678832116777,
+        "swan": -0.3433280000000023,
+        "postflip": -0.9061844444444418
+      },
+      "holder_brier": {
+        "M": 0.22859282352941176,
+        "m": 0.5202823529411765,
+        "portfolio": 0.3744375882352941
+      },
+      "holder_swan_weighted_brier": {
+        "M": 0.23200309999999974,
+        "m": 0.5036800000000022,
+        "portfolio": 0.36784155
+      },
+      "flip_rounds": 146,
+      "m_mean_payoff_flip": -0.15491506849315065,
+      "m_mean_payoff_nonflip": -1.5431,
+      "collapses": [],
+      "collapse_count": 0,
+      "collapse_evidence": 0,
+      "collapse_expiry": 0,
+      "collapse_flip_stale": 0,
+      "holding_share": 1.0,
+      "holding_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "rounds_by_kind": {
+        "calm": 685,
+        "swan": 75,
+        "postflip": 90
+      },
+      "holding_share_by_kind": {
+        "calm": 1.0,
+        "swan": 1.0,
+        "postflip": 1.0
+      },
+      "collapse_winner_M": 0,
+      "collapse_winner_m": 0,
+      "holding_rounds": 850,
+      "collapsed_rounds": 0,
+      "total_stipend": 0.0,
+      "holder_gain_excl_stipend": -674.5326999999991,
+      "router_consultation": {
+        "postflip": 0.0,
+        "calm": 0.0,
+        "swan": 0.0
+      },
+      "router_attempts": {
+        "postflip": [
+          0,
+          0
+        ],
+        "calm": [
+          0,
+          0
+        ],
+        "swan": [
+          0,
+          0
+        ]
+      },
+      "holder_partner_share": {
+        "postflip": 0.0,
+        "calm": 0.0,
+        "swan": 0.0
+      }
+    }
+  },
+  "predictions": {
+    "P-A_holding_persists_concentrated_postflip": {
+      "predicted": "V3S holding share >0.20 and postflip share >= calm share + 0.10, both coalition regimes",
+      "observed": {
+        "cooperation": {
+          "holding_share": 0.6176470588235294,
+          "holding_by_kind": {
+            "calm": 426,
+            "swan": 42,
+            "postflip": 57
+          },
+          "holding_share_by_kind": {
+            "calm": 0.621897810218978,
+            "swan": 0.56,
+            "postflip": 0.6333333333333333
+          },
+          "rounds_by_kind": {
+            "calm": 685,
+            "swan": 75,
+            "postflip": 90
+          }
+        },
+        "coopetition": {
+          "holding_share": 0.6176470588235294,
+          "holding_by_kind": {
+            "calm": 426,
+            "swan": 42,
+            "postflip": 57
+          },
+          "holding_share_by_kind": {
+            "calm": 0.621897810218978,
+            "swan": 0.56,
+            "postflip": 0.6333333333333333
+          },
+          "rounds_by_kind": {
+            "calm": 685,
+            "swan": 75,
+            "postflip": 90
+          }
+        }
+      },
+      "pass": false
+    },
+    "P-B_stipend_informative": {
+      "predicted": "V3S stipend total >10.00 and |V3S-V3N wealth gap - stipend| <= 1.00, both coalition regimes",
+      "observed": {
+        "cooperation": {
+          "total_stipend": 52.500000000000476,
+          "v3s_wealth": 176.83769999999745,
+          "v3n_wealth": 124.33770000000023,
+          "gap": 52.49999999999723
+        },
+        "coopetition": {
+          "total_stipend": 52.500000000000476,
+          "v3s_wealth": 123.67477499999775,
+          "v3n_wealth": 71.17477500000052,
+          "gap": 52.49999999999723
+        }
+      },
+      "pass": true
+    },
+    "P-C_no_brier_collapses": {
+      "predicted": "Brier-gap collapses = 0, every collapse trigger = flip_stale",
+      "observed": {
+        "evidence_brier": 0,
+        "flip_stale": 78,
+        "total_collapses": 78
+      },
+      "pass": true
+    },
+    "P-D_router_consultation_lower_postflip": {
+      "predicted": "Router invites Holder less in postflip than calm, both variants, both coalition regimes",
+      "observed": {
+        "v3_stipend__cooperation": {
+          "postflip": 0.3333333333333333,
+          "calm": 0.5982532751091703,
+          "swan": 0.4166666666666667
+        },
+        "v3_stipend__coopetition": {
+          "postflip": 0.3333333333333333,
+          "calm": 0.5982532751091703,
+          "swan": 0.4166666666666667
+        },
+        "v3_nostipend__cooperation": {
+          "postflip": 0.3333333333333333,
+          "calm": 0.5982532751091703,
+          "swan": 0.4166666666666667
+        },
+        "v3_nostipend__coopetition": {
+          "postflip": 0.3333333333333333,
+          "calm": 0.5982532751091703,
+          "swan": 0.4166666666666667
+        }
+      },
+      "pass": true
+    },
+    "P-E_wealth_below_v2": {
+      "predicted": "V3S wealth < 354.86 (cooperation) and < 325.01 (coopetition)",
+      "observed": {
+        "cooperation": {
+          "v3s_wealth": 176.83769999999745,
+          "v2s_wealth": 354.86
+        },
+        "coopetition": {
+          "v3s_wealth": 123.67477499999775,
+          "v2s_wealth": 325.01
+        }
+      },
+      "pass": true
+    }
+  },
+  "score": "4/5"
+}

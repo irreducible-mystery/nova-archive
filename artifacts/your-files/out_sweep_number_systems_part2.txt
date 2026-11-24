@@ -1,0 +1,76 @@
+======================================================================
+G. QUATERNIONS H: the pole survives non-commutativity
+======================================================================
+  real axis  |q|=300   -> |tau|=3.333e-03  |q|=30    -> |tau|=3.333e-02  |q|=3     -> |tau|=3.333e-01  |q|=0.3   -> |tau|=3.333e+00
+  i-axis     |q|=300   -> |tau|=3.333e-03  |q|=30    -> |tau|=3.333e-02  |q|=3     -> |tau|=3.333e-01  |q|=0.3   -> |tau|=3.333e+00
+  j-axis     |q|=300   -> |tau|=3.333e-03  |q|=30    -> |tau|=3.333e-02  |q|=3     -> |tau|=3.333e-01  |q|=0.3   -> |tau|=3.333e+00
+  k-axis     |q|=300   -> |tau|=3.333e-03  |q|=30    -> |tau|=3.333e-02  |q|=3     -> |tau|=3.333e-01  |q|=0.3   -> |tau|=3.333e+00
+  diagonal   |q|=300   -> |tau|=3.333e-03  |q|=30    -> |tau|=3.333e-02  |q|=3     -> |tau|=3.333e-01  |q|=0.3   -> |tau|=3.333e+00
+  |tau| depends only on |q|, never on the direction: the blowup is
+  radially symmetric in 4D, exactly as in C (which sits inside H as
+  the w-x plane). Non-commutativity never enters: q^-1 = conj(q)/|q|^2
+  uses only the norm, and the norm is multiplicative (|pq| = |p||q|).
+  q = 0 -> ZeroDivisionError: quaternion division by zero (same hard error as Q and F_p)
+  Ordering: H admits NO compatible total order -- in any ordered ring
+  squares are >= 0, but i^2 = -1. So the hotness ordering dies here
+  too (as in C).
+  verdict: the pole is indifferent to commutativity. DIVISION is what
+  matters; order is what varies.
+
+======================================================================
+H. P-ADICS Q_7: 'approaching' by divisibility, not by sliding
+======================================================================
+  Approach to 0 in Q_7: x_n = 7^n  (in hbar=kB=1 units, tau = 1/x)
+    n=0: |x_n|_7 = 7^-0 = 1.000000      |tau|_7 = 7^0 = 1
+    n=1: |x_n|_7 = 7^-1 = 0.142857      |tau|_7 = 7^1 = 7
+    n=2: |x_n|_7 = 7^-2 = 0.020408      |tau|_7 = 7^2 = 49
+    n=3: |x_n|_7 = 7^-3 = 0.002915      |tau|_7 = 7^3 = 343
+    n=4: |x_n|_7 = 7^-4 = 0.000416      |tau|_7 = 7^4 = 2401
+    n=5: |x_n|_7 = 7^-5 = 0.000059      |tau|_7 = 7^5 = 16807
+  |tau|_7 -> infinity 7-adically: the pole EXISTS in Q_7.
+  But 'approaching' is discrete: |x|_7 jumps 1, 1/7, 1/49, ...
+  There is no continuous path -- every ball is clopen, and between
+  x_n and x_{n+1} sit uncountably many points all at the SAME distance.
+
+  The ultrametric inequality: |x+y|_p <= max(|x|_p, |y|_p).
+  Every triangle is isosceles with the equal sides longest.
+    x=7^2, y=7^2+7^5: |x|=0.02040816326530612, |y|=0.02040816326530612, |x+y|=0.02040816326530612 = max (no cancellation possible at top)
+    x=7^2, y=-7^2+7^5: |x+y|=5.9499018266198606e-05 < max (cancellation drops you DOWN a whole level)
+  'Near' and 'far' obey a different geometry: you approach 0 the way
+  an integer approaches divisibility -- in jumps, never by sliding.
+
+  Hensel lift: -1 IS a sum of two squares in Q_7, so Q_7 cannot be
+  ordered (in any ordered field x^2+y^2 >= 0, forever).
+  Fix y = 3; solve x^2 = -10 in Z_7 by digit-lifting from x = 2 mod 7:
+    lifted x (9 digits): x^2 + 3^2 + 1 = 0 mod 7^9  (exact lift)
+  So x^2 + y^2 = -1 holds 7-adically: no compatible order exists,
+  and the hotness ordering dies in Q_7 as well.
+
+  Ostrowski's punchline: Q completes in EXACTLY two ways -- R
+  (Archimedean: approach by sliding) and Q_p (non-Archimedean:
+  approach by divisibility). In Q itself there was no 'approaching'
+  at all (part-1 verdict: hard ZeroDivisionError). The MEANING of
+  'limit' is chosen by the completion -- the floor decides what
+  approaching is.
+  verdict: her '='-vs-limit distinction SURVIVES in Q_7 (limits exist;
+  values at endpoints still don't), but 'approaching' lost its
+  continuum. The distinction is topological; the path is a floor.
+
+======================================================================
+PART-2 VERDICTS (completing part 1's stated-but-uncomputed)
+======================================================================
+  POLE: survives in H (non-commutative) and in Q_7 (non-Archimedean).
+    Everything with division blows up at 0 -- commutativity and the
+    Archimedean property are both irrelevant to the pole.
+  ORDERING: dies in H and in Q_7 (as it did in C). The hotness
+    ordering (negative T hotter than +inf) needs an ordered field.
+    Confirmed: ordering is a floor, not a given.
+  APPROACHING: this is what actually varied. R: slide continuously.
+    Q_7: jump by divisibility through clopen dust. Q: no approach at
+    all until you complete -- and the completion CHOOSES the meaning
+    of 'limit'. (E7: name the G; here G includes the completion.)
+  Her circle in Q_7: the pole is there, but the PATH is not -- 0 and
+    infinity are still the two ends of the valuation, yet 'meeting'
+    means something with no continuum in it. Invariant-under-
+    compactification, and now: invariant-under-completion-choice is
+    FALSE -- R-completion and Q_p-completion give different circles.

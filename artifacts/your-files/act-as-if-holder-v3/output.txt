@@ -1,0 +1,62 @@
+Holder v3 (N=25 flip-stale) — seed 20261026, 850 scored rounds, world = coalition game world (NOT M5)
+
+[v3_stipend__cooperation] wealth={'reactive': 304.28, 'holder': 176.84, 'router': 206.57} rank=['reactive', 'router', 'holder'] first_negative={}
+  holder mean payoff excl stipend=-0.0890 by kind={'calm': -0.0628, 'swan': -0.1961, 'postflip': -0.1992}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=13 flip_stale=13 evidence=0 expiry=0 winner M=13 m=0 holding_rounds=525 holding_share=0.6176 holding_by_kind={'calm': 426, 'swan': 42, 'postflip': 57} holding_share_by_kind={'calm': 0.6219, 'swan': 0.56, 'postflip': 0.6333} collapsed_rounds=325 total_stipend=52.50
+  router consultation={'postflip': 0.333, 'calm': 0.598, 'swan': 0.417} attempts={'postflip': [30, 10], 'calm': [229, 137], 'swan': [24, 10]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v3_stipend__coopetition] wealth={'reactive': 214.23, 'holder': 123.67, 'router': 185.0} rank=['reactive', 'router', 'holder'] first_negative={}
+  holder mean payoff excl stipend=-0.1516 by kind={'calm': -0.1158, 'swan': -0.3835, 'postflip': -0.2302}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=13 flip_stale=13 evidence=0 expiry=0 winner M=13 m=0 holding_rounds=525 holding_share=0.6176 holding_by_kind={'calm': 426, 'swan': 42, 'postflip': 57} holding_share_by_kind={'calm': 0.6219, 'swan': 0.56, 'postflip': 0.6333} collapsed_rounds=325 total_stipend=52.50
+  router consultation={'postflip': 0.333, 'calm': 0.598, 'swan': 0.417} attempts={'postflip': [30, 10], 'calm': [229, 137], 'swan': [24, 10]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v3_stipend__competition] wealth={'reactive': 239.5, 'holder': 36.01, 'router': 214.52} rank=['reactive', 'router', 'holder'] first_negative={}
+  holder mean payoff excl stipend=-0.2547 by kind={'calm': -0.1979, 'swan': -0.594, 'postflip': -0.4044}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=13 flip_stale=13 evidence=0 expiry=0 winner M=13 m=0 holding_rounds=525 holding_share=0.6176 holding_by_kind={'calm': 426, 'swan': 42, 'postflip': 57} holding_share_by_kind={'calm': 0.6219, 'swan': 0.56, 'postflip': 0.6333} collapsed_rounds=325 total_stipend=52.50
+  router consultation={'postflip': 0.0, 'calm': 0.0, 'swan': 0.0} attempts={'postflip': [0, 0], 'calm': [0, 0], 'swan': [0, 0]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v3_nostipend__cooperation] wealth={'reactive': 304.28, 'holder': 124.34, 'router': 206.57} rank=['reactive', 'router', 'holder'] first_negative={}
+  holder mean payoff excl stipend=-0.0890 by kind={'calm': -0.0628, 'swan': -0.1961, 'postflip': -0.1992}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=13 flip_stale=13 evidence=0 expiry=0 winner M=13 m=0 holding_rounds=525 holding_share=0.6176 holding_by_kind={'calm': 426, 'swan': 42, 'postflip': 57} holding_share_by_kind={'calm': 0.6219, 'swan': 0.56, 'postflip': 0.6333} collapsed_rounds=325 total_stipend=0.00
+  router consultation={'postflip': 0.333, 'calm': 0.598, 'swan': 0.417} attempts={'postflip': [30, 10], 'calm': [229, 137], 'swan': [24, 10]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v3_nostipend__coopetition] wealth={'reactive': 214.23, 'holder': 71.17, 'router': 185.0} rank=['reactive', 'router', 'holder'] first_negative={}
+  holder mean payoff excl stipend=-0.1516 by kind={'calm': -0.1158, 'swan': -0.3835, 'postflip': -0.2302}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=13 flip_stale=13 evidence=0 expiry=0 winner M=13 m=0 holding_rounds=525 holding_share=0.6176 holding_by_kind={'calm': 426, 'swan': 42, 'postflip': 57} holding_share_by_kind={'calm': 0.6219, 'swan': 0.56, 'postflip': 0.6333} collapsed_rounds=325 total_stipend=0.00
+  router consultation={'postflip': 0.333, 'calm': 0.598, 'swan': 0.417} attempts={'postflip': [30, 10], 'calm': [229, 137], 'swan': [24, 10]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v3_nostipend__competition] wealth={'reactive': 239.5, 'holder': -16.49, 'router': 214.52} rank=['reactive', 'router', 'holder'] first_negative={'holder': 827}
+  holder mean payoff excl stipend=-0.2547 by kind={'calm': -0.1979, 'swan': -0.594, 'postflip': -0.4044}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=13 flip_stale=13 evidence=0 expiry=0 winner M=13 m=0 holding_rounds=525 holding_share=0.6176 holding_by_kind={'calm': 426, 'swan': 42, 'postflip': 57} holding_share_by_kind={'calm': 0.6219, 'swan': 0.56, 'postflip': 0.6333} collapsed_rounds=325 total_stipend=0.00
+  router consultation={'postflip': 0.0, 'calm': 0.0, 'swan': 0.0} attempts={'postflip': [0, 0], 'calm': [0, 0], 'swan': [0, 0]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v1__cooperation] wealth={'reactive': 311.49, 'holder': -495.07, 'router': 163.53} rank=['reactive', 'router', 'holder'] first_negative={'holder': 397}
+  holder mean payoff excl stipend=-0.8177 by kind={'calm': -0.8593, 'swan': -0.3823, 'postflip': -0.8643}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=0 flip_stale=0 evidence=0 expiry=0 winner M=0 m=0 holding_rounds=850 holding_share=1.0000 holding_by_kind={'calm': 685, 'swan': 75, 'postflip': 90} holding_share_by_kind={'calm': 1.0, 'swan': 1.0, 'postflip': 1.0} collapsed_rounds=0 total_stipend=0.00
+  router consultation={'postflip': 0.0, 'calm': 0.236, 'swan': 0.208} attempts={'postflip': [30, 0], 'calm': [229, 54], 'swan': [24, 5]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v1__coopetition] wealth={'reactive': 182.63, 'holder': -490.97, 'router': 129.42} rank=['reactive', 'router', 'holder'] first_negative={'holder': 393}
+  holder mean payoff excl stipend=-0.8129 by kind={'calm': -0.8495, 'swan': -0.3669, 'postflip': -0.9062}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=0 flip_stale=0 evidence=0 expiry=0 winner M=0 m=0 holding_rounds=850 holding_share=1.0000 holding_by_kind={'calm': 685, 'swan': 75, 'postflip': 90} holding_share_by_kind={'calm': 1.0, 'swan': 1.0, 'postflip': 1.0} collapsed_rounds=0 total_stipend=0.00
+  router consultation={'postflip': 0.0, 'calm': 0.236, 'swan': 0.208} attempts={'postflip': [30, 0], 'calm': [229, 54], 'swan': [24, 5]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+[v1__competition] wealth={'reactive': 239.5, 'holder': -474.53, 'router': 147.03} rank=['reactive', 'router', 'holder'] first_negative={'holder': 397}
+  holder mean payoff excl stipend=-0.7936 by kind={'calm': -0.8281, 'swan': -0.3433, 'postflip': -0.9062}
+  holder Brier={'M': 0.2286, 'm': 0.5203, 'portfolio': 0.3744} swan-weighted={'M': 0.232, 'm': 0.5037, 'portfolio': 0.3678}
+  collapses=0 flip_stale=0 evidence=0 expiry=0 winner M=0 m=0 holding_rounds=850 holding_share=1.0000 holding_by_kind={'calm': 685, 'swan': 75, 'postflip': 90} holding_share_by_kind={'calm': 1.0, 'swan': 1.0, 'postflip': 1.0} collapsed_rounds=0 total_stipend=0.00
+  router consultation={'postflip': 0.0, 'calm': 0.0, 'swan': 0.0} attempts={'postflip': [0, 0], 'calm': [0, 0], 'swan': [0, 0]} flip_rounds=146 m_pay_flip=-0.1549 m_pay_nonflip=-1.5431
+
+PREDICTIONS: 4/5
+  P-A_holding_persists_concentrated_postflip: FAIL — {'cooperation': {'holding_share': 0.6176470588235294, 'holding_by_kind': {'calm': 426, 'swan': 42, 'postflip': 57}, 'holding_share_by_kind': {'calm': 0.621897810218978, 'swan': 0.56, 'postflip': 0.6333333333333333}, 'rounds_by_kind': {'calm': 685, 'swan': 75, 'postflip': 90}}, 'coopetition': {'holding_share': 0.6176470588235294, 'holding_by_kind': {'calm': 426, 'swan': 42, 'postflip': 57}, 'holding_share_by_kind': {'calm': 0.621897810218978, 'swan': 0.56, 'postflip': 0.6333333333333333}, 'rounds_by_kind': {'calm': 685, 'swan': 75, 'postflip': 90}}}
+  P-B_stipend_informative: PASS — {'cooperation': {'total_stipend': 52.500000000000476, 'v3s_wealth': 176.83769999999745, 'v3n_wealth': 124.33770000000023, 'gap': 52.49999999999723}, 'coopetition': {'total_stipend': 52.500000000000476, 'v3s_wealth': 123.67477499999775, 'v3n_wealth': 71.17477500000052, 'gap': 52.49999999999723}}
+  P-C_no_brier_collapses: PASS — {'evidence_brier': 0, 'flip_stale': 78, 'total_collapses': 78}
+  P-D_router_consultation_lower_postflip: PASS — {'v3_stipend__cooperation': {'postflip': 0.3333333333333333, 'calm': 0.5982532751091703, 'swan': 0.4166666666666667}, 'v3_stipend__coopetition': {'postflip': 0.3333333333333333, 'calm': 0.5982532751091703, 'swan': 0.4166666666666667}, 'v3_nostipend__cooperation': {'postflip': 0.3333333333333333, 'calm': 0.5982532751091703, 'swan': 0.4166666666666667}, 'v3_nostipend__coopetition': {'postflip': 0.3333333333333333, 'calm': 0.5982532751091703, 'swan': 0.4166666666666667}}
+  P-E_wealth_below_v2: PASS — {'cooperation': {'v3s_wealth': 176.83769999999745, 'v2s_wealth': 354.86}, 'coopetition': {'v3s_wealth': 123.67477499999775, 'v2s_wealth': 325.01}}

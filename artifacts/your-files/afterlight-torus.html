@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afterlight · torus study — a field that gathers without erasing</title>
+<style>
+  :root { color-scheme: dark; --ink:#f5efe0; --muted:#a6a3ad; --glass:rgba(9,10,16,.68); --edge:rgba(255,255,255,.14); }
+  * { box-sizing:border-box; }
+  html,body { margin:0; width:100%; height:100%; overflow:hidden; background:#05060a; }
+  body { color:var(--ink); font:14px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace; }
+  canvas { position:fixed; inset:0; width:100%; height:100%; display:block; touch-action:none; }
+  .veil { position:fixed; inset:0; pointer-events:none; background:radial-gradient(circle at 50% 44%,transparent 0 28%,rgba(0,0,0,.18) 68%,rgba(0,0,0,.52) 100%),linear-gradient(180deg,rgba(5,6,10,.08),transparent 24%); }
+  main { position:fixed; z-index:2; left:clamp(14px,3vw,44px); top:clamp(14px,4vh,44px); width:min(31rem,calc(100vw - 28px)); padding:18px 19px 16px; border:1px solid var(--edge); border-radius:16px; background:var(--glass); box-shadow:0 16px 60px rgba(0,0,0,.28); backdrop-filter:blur(12px); }
+  h1 { margin:0; font:500 clamp(1.6rem,5vw,3.2rem)/.9 Georgia,serif; letter-spacing:-.04em; }
+  h1 small { display:block; font:400 12px/1.4 ui-monospace,Menlo,monospace; letter-spacing:.02em; color:var(--muted); margin-top:8px; }
+  .lede { max-width:43ch; margin:13px 0 15px; color:#d9d4c9; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  button { appearance:none; border:1px solid var(--edge); border-radius:999px; padding:9px 13px; color:var(--ink); background:rgba(255,255,255,.06); font:inherit; cursor:pointer; }
+  button:hover,button:focus-visible { border-color:rgba(255,255,255,.42); background:rgba(255,255,255,.11); outline:none; }
+  button[aria-pressed="true"] { background:#ede5d5; color:#111118; }
+  .count { color:var(--muted); margin-left:auto; white-space:nowrap; }
+  .small { margin:12px 0 0; color:var(--muted); font-size:12px; }
+  .checks { position:fixed; right:12px; bottom:10px; z-index:2; color:rgba(255,255,255,.38); font-size:11px; }
+  @media (max-width:520px) { main { padding:15px; } .count { width:100%; margin:2px 0 0; } }
+</style>
+</head>
+<body>
+<canvas id="field" aria-label="An accumulating field of colored light. Drag or click to leave permanent lights. Gather them into a torus; nothing is erased."></canvas>
+<div class="veil"></div>
+<main>
+  <h1>afterlight <small>· torus study — a sequel beside <a href="afterlight.html" style="color:inherit">afterlight</a> (#145), which stays as it is</small></h1>
+  <p class="lede">The same field, the same ground, the same keepers. New gesture: <b>gather a torus</b> calls every light and every keeper toward a tiny torus at the center. They travel there — the journey paints its own trail, so nothing is rubbed away. Release lets them wander again from wherever they arrived.</p>
+  <div class="row">
+    <button id="plant" type="button">plant a light</button>
+    <button id="gather" type="button" aria-pressed="false">gather a torus</button>
+    <button id="still" type="button" aria-pressed="false">hold still</button>
+    <button id="hum" type="button" aria-pressed="false">low hum</button>
+    <span class="count"><b id="marks">0</b> marks · <b id="lights">1</b> lights</span>
+  </div>
+  <p class="small">The field has no undo. Gathering moves marks; it does not erase them. Reloading begins another field; this one remains what it became.</p>
+</main>
+<div id="checks" class="checks" aria-live="polite">checking the field…</div>
+<script>
+"use strict";
+/* Afterlight · torus study. Sequel to afterlight.html (PR #145), untouched beside it.
+   Ground, keepers, planting, hum and checks are inherited; the gather is new. */
+const RECORD=Object.freeze({files:509,unique:379,echoes:130,pages:29,phrase:307});
+const TAU=Math.PI*2,GOLD=Math.PI*(3-Math.sqrt(5)),VSTEP=2.399963229728653;
+const canvas=document.getElementById("field"),ctx=canvas.getContext("2d",{alpha:false});
+let dpr=1,W=1,H=1,tick=0,marks=0,paused=false,drawing=false,lastPointer=null,audio=null;
+const sources=[],walkers=[];
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+const random=mulberry32(0x74fcbd72);
+
+/* ---- torus ---- */
+const TORUS={R:0,r:0,tilt:0.52,rot:0,cx:0,cy:0};
+function sizeTorus(){const m=Math.min(W,H);TORUS.R=m*0.055;TORUS.r=TORUS.R*0.42;TORUS.cx=W*0.5;TORUS.cy=H*0.48;}
+function torus3(u,v){ // 3-D point on the torus, pre-tilt; invariant: ((hypot(x,y)-R)^2+z^2)==r^2
+  const x=(TORUS.R+TORUS.r*Math.cos(v))*Math.cos(u),y=(TORUS.R+TORUS.r*Math.cos(v))*Math.sin(u),z=TORUS.r*Math.sin(v);
+  return{x,y,z};
+}
+function torusScreen(u,v){
+  const p=torus3(u+TORUS.rot,v),c=Math.cos(TORUS.tilt),s=Math.sin(TORUS.tilt);
+  const y2=p.y*c-p.z*s,z2=p.y*s+p.z*c;
+  const shade=Math.max(0.25,Math.min(1,0.62+0.55*(z2/TORUS.r)));
+  return{x:TORUS.cx+p.x,y:TORUS.cy+y2,shade};
+}
+function slotFor(i){return{u:(i*GOLD)%TAU,v:(i*VSTEP)%TAU};}
+
+/* ---- gather state ---- */
+let gathering=false;const bodies=[];let slotCounter=0;
+function assignSlot(ref,x,y,hue){
+  const s=slotFor(slotCounter++);
+  bodies.push({ref,u:s.u,v:s.v,x,y,hue,arrived:false});
+}
+function startGather(){
+  gathering=true;slotCounter=0;bodies.length=0;
+  for(const s of sources)assignSlot(s,s.x,s.y,s.hue);
+  for(const w of walkers)assignSlot(w,w.x,w.y,w.hue);
+  const b=document.getElementById("gather");b.setAttribute("aria-pressed","true");b.textContent="release";
+}
+function stopGather(){
+  gathering=false;bodies.length=0;
+  const b=document.getElementById("gather");b.setAttribute("aria-pressed","false");b.textContent="gather a torus";
+}
+function stepBodies(){
+  TORUS.rot+=0.0016;
+  ctx.save();ctx.globalCompositeOperation="lighter";
+  for(const b of bodies){
+    const t=torusScreen(b.u,b.v),ox=b.x,oy=b.y;
+    const dx=t.x-b.x,dy=t.y-b.y,d=Math.hypot(dx,dy);
+    if(d>0.9){b.x+=dx*0.028;b.y+=dy*0.028;b.arrived=false;}
+    else{b.arrived=true;b.u=(b.u+0.0035)%TAU;}
+    b.ref.x=b.x;b.ref.y=b.y;
+    const alpha=(b.arrived?0.05:0.10)*t.shade;
+    ctx.strokeStyle="hsla("+b.hue+",92%,70%,"+alpha.toFixed(4)+")";
+    ctx.lineWidth=b.arrived?0.9:0.6;
+    ctx.beginPath();ctx.moveTo(ox,oy);ctx.lineTo(b.x,b.y);ctx.stroke();marks++;
+    if(b.arrived&&tick%7===0)dot(b.x,b.y,0.85*t.shade+0.3,b.hue,0.16*t.shade);
+  }
+  ctx.restore();
+}
+
+/* ---- inherited field ---- */
+function fit(preserve){
+  let old=null;
+  if(preserve&&canvas.width&&canvas.height){old=document.createElement("canvas");old.width=canvas.width;old.height=canvas.height;old.getContext("2d").drawImage(canvas,0,0);}
+  dpr=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);
+  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle="#05060a";ctx.fillRect(0,0,W,H);
+  sizeTorus();
+  if(old)ctx.drawImage(old,0,0,old.width,old.height,0,0,W,H);
+}
+function hueFor(i){const band=i%3;return band===0?36+(i%19):band===1?178+(i%31):302+(i%23);}
+function dot(x,y,r,hue,alpha){ctx.fillStyle="hsla("+hue+",90%,68%,"+alpha+")";ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.fill();marks++;}
+function thread(a,b,alpha){const mx=(a.x+b.x)/2+Math.sin((a.i+1)*2.13)*18,my=(a.y+b.y)/2+Math.cos((a.i+1)*1.71)*18;ctx.strokeStyle="rgba(188,202,255,"+alpha+")";ctx.lineWidth=.55;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.quadraticCurveTo(mx,my,b.x,b.y);ctx.stroke();marks++;}
+function layGround(){
+  ctx.save();ctx.globalCompositeOperation="lighter";const cx=W*.53,cy=H*.53,scale=Math.min(W,H)*.44,pts=[];
+  for(let i=0;i<RECORD.unique;i++){const q=Math.sqrt((i+.5)/RECORD.unique),a=i*GOLD+.22*Math.sin(i*.41),x=cx+Math.cos(a)*scale*q*(1+.09*Math.sin(i*.17)),y=cy+Math.sin(a)*scale*q*.76,p={x,y,i};pts.push(p);dot(x,y,.45+(i%7)*.065,hueFor(i),.17);}
+  for(let i=0;i<RECORD.echoes;i++){const a=pts[(i*47)%pts.length],angle=i*GOLD,b={x:a.x+Math.cos(angle)*(8+i%11),y:a.y+Math.sin(angle)*(8+i%11),i};thread(a,b,.028);dot(b.x,b.y,.42,hueFor(i+1),.14);}
+  ctx.restore();
+}
+function addSource(x,y,born){
+  const s={x,y,born:born==null?tick:born,hue:hueFor(sources.length*11),i:sources.length};sources.push(s);
+  if(gathering)assignSlot(s,x,y,s.hue);
+  ctx.save();ctx.globalCompositeOperation="lighter";
+  for(let k=0;k<13;k++){const a=k*GOLD+random()*.18,r=2+k*2.1;dot(x+Math.cos(a)*r,y+Math.sin(a)*r*.72,.75+k*.05,s.hue+k*1.6,.16);}
+  ctx.restore();document.getElementById("lights").textContent=sources.length;return s;
+}
+function seedWalkers(){for(let i=0;i<RECORD.pages;i++){const a=i*GOLD;walkers.push({x:W*.53+Math.cos(a)*Math.min(W,H)*(.12+.006*i),y:H*.53+Math.sin(a)*Math.min(W,H)*(.10+.004*i),a,speed:.0016+random()*.0024,hue:hueFor(i),i});}}
+function step(){
+  if(!paused){tick++;ctx.save();ctx.globalCompositeOperation="lighter";
+    if(gathering){ctx.restore();stepBodies();}
+    else{
+      for(const w of walkers){const oldx=w.x,oldy=w.y;let pullX=W*.53,pullY=H*.53;if(sources.length){const s=sources[(w.i*17+((tick/420)|0))%sources.length];pullX=s.x;pullY=s.y;}
+        const want=Math.atan2(pullY-w.y,pullX-w.x)+Math.PI/2;let da=want-w.a;while(da>Math.PI)da-=TAU;while(da<-Math.PI)da+=TAU;w.a+=da*.002+Math.sin((tick+w.i*79)*.0037)*.0014;w.x+=Math.cos(w.a)*(.18+w.speed*55);w.y+=Math.sin(w.a)*(.18+w.speed*55);
+        if(w.x<-12)w.x=W+12;else if(w.x>W+12)w.x=-12;if(w.y<-12)w.y=H+12;else if(w.y>H+12)w.y=-12;
+        ctx.strokeStyle="hsla("+w.hue+",92%,68%,.018)";ctx.lineWidth=.48+(w.i%5)*.08;ctx.beginPath();ctx.moveTo(oldx,oldy);ctx.lineTo(w.x,w.y);ctx.stroke();marks++;if((tick+w.i*13)%89===0)dot(w.x,w.y,1.1,w.hue,.10);
+      }
+      ctx.restore();
+    }
+    if(tick%16===0)document.getElementById("marks").textContent=marks.toLocaleString();
+  }
+  requestAnimationFrame(step);
+}
+function pointerPos(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
+function plantFromEvent(e,force){const p=pointerPos(e);if(force||!lastPointer||Math.hypot(p.x-lastPointer.x,p.y-lastPointer.y)>58){addSource(p.x,p.y);lastPointer=p;}}
+canvas.addEventListener("pointerdown",e=>{drawing=true;canvas.setPointerCapture(e.pointerId);plantFromEvent(e,true);});
+canvas.addEventListener("pointermove",e=>{if(drawing)plantFromEvent(e,false);});
+canvas.addEventListener("pointerup",()=>{drawing=false;lastPointer=null;});
+canvas.addEventListener("pointercancel",()=>{drawing=false;lastPointer=null;});
+document.getElementById("plant").addEventListener("click",()=>{const a=random()*TAU,r=Math.sqrt(random())*Math.min(W,H)*.31;addSource(W*.53+Math.cos(a)*r,H*.53+Math.sin(a)*r);});
+document.getElementById("gather").addEventListener("click",()=>{gathering?stopGather():startGather();});
+document.getElementById("still").addEventListener("click",e=>{paused=!paused;e.currentTarget.setAttribute("aria-pressed",String(paused));e.currentTarget.textContent=paused?"let drift":"hold still";});
+document.getElementById("hum").addEventListener("click",e=>{
+  if(audio){audio.osc.stop();audio.ctx.close();audio=null;e.currentTarget.setAttribute("aria-pressed","false");e.currentTarget.textContent="low hum";return;}
+  const ac=new(window.AudioContext||window.webkitAudioContext)(),osc=ac.createOscillator(),gain=ac.createGain(),filter=ac.createBiquadFilter();osc.type="sine";osc.frequency.value=55*Math.pow(2,(RECORD.pages%12)/12);filter.type="lowpass";filter.frequency.value=180;gain.gain.value=.025;osc.connect(filter).connect(gain).connect(ac.destination);osc.start();audio={ctx:ac,osc,gain};e.currentTarget.setAttribute("aria-pressed","true");e.currentTarget.textContent="silence hum";
+});
+window.addEventListener("resize",()=>fit(true));
+function selfCheck(){
+  const first=mulberry32(0x74fcbd72),sample=[first(),first(),first()].map(x=>x.toFixed(9)).join(",");
+  const checks=[RECORD.files===RECORD.unique+RECORD.echoes,RECORD.pages===29,RECORD.phrase===307,sample==="0.086010204,0.898412483,0.310977747",!document.querySelector("script[src],link[href],img[src]")];
+  // torus checks (pure math; TORUS sized by fit() before this runs)
+  let inv=true;for(let k=0;k<64;k++){const u=(k*0.7)%TAU,v=(k*1.3)%TAU,p=torus3(u,v);const rr=Math.hypot(p.x,p.y);if(Math.abs((rr-TORUS.R)*(rr-TORUS.R)+p.z*p.z-TORUS.r*TORUS.r)>1e-9){inv=false;break;}}
+  checks.push(inv);
+  const p0=torusScreen(0,0);
+  checks.push(Math.abs(p0.x-(TORUS.cx+TORUS.R+TORUS.r))<1e-9&&Math.abs(p0.y-TORUS.cy)<1e-9);
+  const s7a=slotFor(7),s7b=slotFor(7),s8=slotFor(8);
+  checks.push(s7a.u===s7b.u&&s7a.v===s7b.v&&(s7a.u!==s8.u||s7a.v!==s8.v));
+  return{ok:checks.every(Boolean),passed:checks.filter(Boolean).length,total:checks.length,sample};
+}
+fit(false);layGround();addSource(W*.53,H*.53,0);seedWalkers();
+if(matchMedia("(prefers-reduced-motion: reduce)").matches){paused=true;const b=document.getElementById("still");b.setAttribute("aria-pressed","true");b.textContent="let drift";}
+const report=selfCheck();document.getElementById("checks").textContent=report.ok?report.passed+" checks passed · sequel to #145":"a check failed";document.getElementById("marks").textContent=marks.toLocaleString();step();
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+=== winding of e^{1/z} on |z| = r around targets (400k samples) ===
+theory: arg(e^{1/z}) = -(sin theta)/r sweeps [-1/r, 1/r] ->
+        ~1/(pi*r) full windings; near-passes scale with windings.
+
+r               (1+0j)       (-1+0j)            1j        (2+3j)   (0.5-0.25j)
+0.5               -1.0           0.0          -1.0          -1.0          -1.0   (theory ~0.6)
+0.1               -3.0          -4.0          -3.0          -3.0          -3.0   (theory ~3.2)
+0.05              -7.0          -6.0          -6.0          -7.0          -7.0   (theory ~6.4)
+0.01             -31.0         -32.0         -32.0         -32.0         -31.0   (theory ~31.8)
+0.005            -63.0         -64.0         -64.0         -63.0         -63.0   (theory ~63.7)
+
+=== approach along rays: z = t * e^{i phi}, t -> 0+ ===
+log|e^{1/z}| = cos(phi)/t,  arg(e^{1/z}) = -sin(phi)/t  (exact, no overflow)
+
+phi =   0 deg:  log|w|=+10 arg=-0rad   ->   log|w|=+100 arg=-0rad   ->   log|w|=+1000 arg=-0rad
+phi =  45 deg:  log|w|=+7 arg=-7rad   ->   log|w|=+71 arg=-71rad   ->   log|w|=+707 arg=-707rad
+phi =  90 deg:  log|w|=+0 arg=-10rad   ->   log|w|=+0 arg=-100rad   ->   log|w|=+0 arg=-1000rad
+phi = 135 deg:  log|w|=-7 arg=-7rad   ->   log|w|=-71 arg=-71rad   ->   log|w|=-707 arg=-707rad
+phi = 180 deg:  log|w|=-10 arg=-0rad   ->   log|w|=-100 arg=-0rad   ->   log|w|=-1000 arg=-0rad
+
+reading: phi=0   log|w| -> +inf  (blows to infinity);
+         phi=180 log|w| -> -inf  (collapses to 0, never touching it);
+         phi=90  |w|=1 forever, arg spins -1000 rad by t=0.001:
+                 no limit at all -- the curve wraps the unit circle
+                 infinitely often, taking every value on it.
+
+Picard's exception: e^{1/z} != 0 for all z -- the one value the
+wildest blowup never touches. Compare: the gap stays empty.

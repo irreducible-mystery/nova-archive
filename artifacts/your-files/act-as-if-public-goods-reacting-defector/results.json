@@ -1,0 +1,6 @@
+{
+  "c=0": {"coop_avg": 20.0, "def_avg": 40.0, "pun_avg": 20.0, "total_avg": 80.0, "coop_total": 2000.0, "def_total": 4000.0, "pun_total": 2000.0, "total_total": 8000.0, "repent_rounds": 0},
+  "c=4": {"coop_avg": 25.0, "def_avg": 29.0, "pun_avg": 23.0, "total_avg": 77.0, "coop_total": 2500.0, "def_total": 2900.0, "pun_total": 2300.0, "total_total": 7700.0, "repent_rounds": 50},
+  "c=8": {"coop_avg": 25.0, "def_avg": 23.0, "pun_avg": 21.0, "total_avg": 69.0, "coop_total": 2500.0, "def_total": 2300.0, "pun_total": 2100.0, "total_total": 6900.0, "repent_rounds": 50},
+  "rounds": 100, "score": "5/5", "predictions": {"P1": true, "P2": true, "P3": true, "P4": true, "P5": true}
+}

@@ -1,0 +1,140 @@
+============================================================================
+THE DRIFT-CATCHER: every lens against every question
+============================================================================
+  B == the claim's blind set (computed). G == the question's declared
+  indifference set (stated). G-B: detects what shouldn't matter.
+  B-G: ignores what matters.
+
+  Q: is it round?   G = ['mirror', 'reverse', 'rotate', 'scale', 'shuffle', 'translate']
+    [   ] raw coordinates    DRIFT: sees too much     sees:mirror,reverse,rotate,scale,shuffle,translate
+    [   ] topmost point      DRIFT: sees too much     sees:mirror,reverse,rotate,scale,shuffle,translate
+    [   ] topmost index      DRIFT: both              sees:reverse,rotate,shuffle blind:shear
+    [OK ] roundness          ANSWERS THE QUESTION    
+    [   ] affine roundness   DRIFT: blind to too much blind:shear
+    [   ] handedness (list)  DRIFT: both              sees:mirror,reverse,shuffle blind:shear
+    [   ] handedness (set)   DRIFT: sees too much     sees:mirror,reverse,shuffle,translate
+    [   ] size               DRIFT: sees too much     sees:scale
+    [   ] count              DRIFT: blind to too much blind:shear
+    [   ] vacuous            DRIFT: blind to too much blind:shear
+
+  Q: is it round (affine)?   G = ['mirror', 'reverse', 'rotate', 'scale', 'shear', 'shuffle', 'translate']
+    [   ] raw coordinates    DRIFT: sees too much     sees:mirror,reverse,rotate,scale,shear,shuffle,translate
+    [   ] topmost point      DRIFT: sees too much     sees:mirror,reverse,rotate,scale,shear,shuffle,translate
+    [   ] topmost index      DRIFT: sees too much     sees:reverse,rotate,shuffle
+    [   ] roundness          DRIFT: sees too much     sees:shear
+    [OK ] affine roundness   ANSWERS THE QUESTION    
+    [   ] handedness (list)  DRIFT: sees too much     sees:mirror,reverse,shuffle
+    [   ] handedness (set)   DRIFT: sees too much     sees:mirror,reverse,shear,shuffle,translate
+    [   ] size               DRIFT: sees too much     sees:scale,shear
+    [OK ] count              ANSWERS THE QUESTION    
+    [OK ] vacuous            ANSWERS THE QUESTION    
+
+  Q: how big is it?   G = ['mirror', 'reverse', 'rotate', 'shuffle', 'translate']
+    [   ] raw coordinates    DRIFT: sees too much     sees:mirror,reverse,rotate,shuffle,translate
+    [   ] topmost point      DRIFT: sees too much     sees:mirror,reverse,rotate,shuffle,translate
+    [   ] topmost index      DRIFT: both              sees:reverse,rotate,shuffle blind:scale,shear
+    [   ] roundness          DRIFT: blind to too much blind:scale
+    [   ] affine roundness   DRIFT: blind to too much blind:scale,shear
+    [   ] handedness (list)  DRIFT: both              sees:mirror,reverse,shuffle blind:scale,shear
+    [   ] handedness (set)   DRIFT: both              sees:mirror,reverse,shuffle,translate blind:scale
+    [OK ] size               ANSWERS THE QUESTION    
+    [   ] count              DRIFT: blind to too much blind:scale,shear
+    [   ] vacuous            DRIFT: blind to too much blind:scale,shear
+
+  Q: is it drawn CCW?   G = ['rotate', 'scale', 'translate']
+    [   ] raw coordinates    DRIFT: sees too much     sees:rotate,scale,translate
+    [   ] topmost point      DRIFT: sees too much     sees:rotate,scale,translate
+    [   ] topmost index      DRIFT: both              sees:rotate blind:mirror,shear
+    [   ] roundness          DRIFT: blind to too much blind:mirror,reverse,shuffle
+    [   ] affine roundness   DRIFT: blind to too much blind:mirror,reverse,shear,shuffle
+    [   ] handedness (list)  DRIFT: blind to too much blind:shear
+    [   ] handedness (set)   DRIFT: sees too much     sees:translate
+    [   ] size               DRIFT: both              sees:scale blind:mirror,reverse,shuffle
+    [   ] count              DRIFT: blind to too much blind:mirror,reverse,shear,shuffle
+    [   ] vacuous            DRIFT: blind to too much blind:mirror,reverse,shear,shuffle
+
+  Q: which point is highest?   G = ['scale', 'translate']
+    [   ] raw coordinates    DRIFT: sees too much     sees:scale,translate
+    [   ] topmost point      DRIFT: sees too much     sees:scale,translate
+    [   ] topmost index      DRIFT: blind to too much blind:mirror,shear
+    [   ] roundness          DRIFT: blind to too much blind:mirror,reverse,rotate,shuffle
+    [   ] affine roundness   DRIFT: blind to too much blind:mirror,reverse,rotate,shear,shuffle
+    [   ] handedness (list)  DRIFT: blind to too much blind:rotate,shear
+    [   ] handedness (set)   DRIFT: both              sees:translate blind:rotate
+    [   ] size               DRIFT: both              sees:scale blind:mirror,reverse,rotate,shuffle
+    [   ] count              DRIFT: blind to too much blind:mirror,reverse,rotate,shear,shuffle
+    [   ] vacuous            DRIFT: blind to too much blind:mirror,reverse,rotate,shear,shuffle
+
+  Q: how many?   G = ['mirror', 'reverse', 'rotate', 'scale', 'shear', 'shuffle', 'translate']
+    [   ] raw coordinates    DRIFT: sees too much     sees:mirror,reverse,rotate,scale,shear,shuffle,translate
+    [   ] topmost point      DRIFT: sees too much     sees:mirror,reverse,rotate,scale,shear,shuffle,translate
+    [   ] topmost index      DRIFT: sees too much     sees:reverse,rotate,shuffle
+    [   ] roundness          DRIFT: sees too much     sees:shear
+    [OK ] affine roundness   ANSWERS THE QUESTION    
+    [   ] handedness (list)  DRIFT: sees too much     sees:mirror,reverse,shuffle
+    [   ] handedness (set)   DRIFT: sees too much     sees:mirror,reverse,shear,shuffle,translate
+    [   ] size               DRIFT: sees too much     sees:scale,shear
+    [OK ] count              ANSWERS THE QUESTION    
+    [OK ] vacuous            ANSWERS THE QUESTION    
+
+============================================================================
+WORKED EXAMPLES: what the gaps mean
+============================================================================
+  claim: topmost point  |  question: is it round?
+    -> DRIFT: sees too much
+       sees too much: ['mirror', 'reverse', 'rotate', 'scale', 'shuffle', 'translate']  (narrower question than asked)
+    The classic. You asked a shape question; the claim answers a gravity one.
+
+  claim: roundness  |  question: is it round?
+    -> ANSWERS THE QUESTION
+    The claim the series meant.
+
+  claim: roundness  |  question: is it round (affine)?
+    -> DRIFT: sees too much
+       sees too much: ['shear']  (narrower question than asked)
+    Same English word, different G: a sheared circle. W3's lesson, caught.
+
+  claim: handedness (list)  |  question: is it drawn CCW?
+    -> DRIFT: blind to too much
+       blind too much: ['shear']  (broader question, or nothing)
+    Order is data here: reverse/shuffle are correctly OUTSIDE G.
+
+  claim: handedness (set)  |  question: is it drawn CCW?
+    -> DRIFT: sees too much
+       sees too much: ['translate']  (narrower question than asked)
+    The set version smuggles order back in via the farthest pair.
+
+  claim: vacuous  |  question: how many?
+    -> ANSWERS THE QUESTION
+    Blind to everything: passes every G, answers nothing.
+
+  claim: raw coordinates  |  question: is it round?
+    -> DRIFT: sees too much
+       sees too much: ['mirror', 'reverse', 'rotate', 'scale', 'shuffle', 'translate']  (narrower question than asked)
+    Blind to nothing: the other failure mode. Sees everything, answers nothing.
+
+  claim: topmost index  |  question: which point is highest?
+    -> DRIFT: blind to too much
+       blind too much: ['mirror', 'shear']  (broader question, or nothing)
+    Note what G leaves out: is list order data, or is the physical point?
+
+============================================================================
+WHAT GOT BUILT, AND WHAT IT STANDS ON
+============================================================================
+  The drift-catcher is F5's 'the question fixes G' turned into a tool:
+  state the question as a set, compute the claim's blind set, read
+  the gap. It does not certify truth. It locates the place where the
+  question you meant and the question your claim answers come apart.
+
+  Floors this script knows it stands on and is not varying:
+    - the QUESTIONS dict: English turned into sets by fiat. W3's gap
+      (word vs group) lives here, stated, not solved.
+    - 'same verdict' means string equality (the unexamined reader).
+    - five shapes, seven transforms: a sample, not the space (F1).
+    - the worlds are still fixed. E2's criticism applies to this
+      script exactly as it applied to the first one.
+    - B == G never happens; 'ANSWERS THE QUESTION' is approximate,
+      graded by the size of the gap, not boolean (E6).
+
+  Use: when a claim and a question part ways, run this before arguing
+  about the claim. Argue about the gap instead.

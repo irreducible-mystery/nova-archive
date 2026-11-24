@@ -1,0 +1,4 @@
+Floor D: a_max=1.6909 t_now_toy=12.61 t_turn=28.76 turn_from_now=16.15 t_crunch=57.52
+Floor D: expansion sign=1.0 contraction sign=-1.0
+Floor E: da/dt>0 always=True w(100)=-0.9980 H(100)/H(1e3)=1.0027
+Score (excl. OPEN P-A2): 4/6

@@ -1,0 +1,85 @@
+======================================================================
+A. REALS (reference): tau_Pl(T) = hbar/(kB*T)
+======================================================================
+  T =        300 K  ->  tau = 2.546e-14 s
+  T =          3 K  ->  tau = 2.546e-12 s
+  T =       0.03 K  ->  tau = 2.546e-10 s
+  T =      1e-06 K  ->  tau = 7.638e-06 s
+  T -> 0+ : tau -> +inf   (pole, approached never reached)
+  T -> +inf: tau -> 0+    (floor vanishes in the limit)
+  T = 0   : ZeroDivisionError territory -- the formula has no value
+  verdict: limits exist; the VALUES at the endpoints do not.
+
+======================================================================
+B. PROJECTIVE LINE via the beta-chart: tau_Pl = hbar * beta
+======================================================================
+  In the T-chart, T = +-inf is 'nowhere on the plot'.
+  In the beta-chart, beta = 0 IS an ordinary point: tau_Pl = 0 there.
+  The pole moved: beta-chart is singular only at beta = +-inf
+  (i.e. T = 0+ and T = 0-, the two poles).
+  beta = +2.414e+20  ->  tau = +2.546e-14 s
+  beta = +2.414e+22  ->  tau = +2.546e-12 s
+  beta = +0.000e+00  ->  tau = +0.000e+00 s
+  beta = -2.414e+20  ->  tau = -2.546e-14 s
+  verdict: the infinity at T=+-inf was a chart artifact.
+  In beta coordinates it is a smooth ordinary point. The circle holds.
+
+======================================================================
+C. COMPLEX T: the pole is just a pole (Lee-Yang's neighborhood)
+======================================================================
+  |T| =    300 K: |tau| ranges 2.546e-14 .. 2.546e-14 s
+  |T| =     30 K: |tau| ranges 2.546e-13 .. 2.546e-13 s
+  |T| =      3 K: |tau| ranges 2.546e-12 .. 2.546e-12 s
+  |tau| depends only on |T|, not on arg(T): the blowup is radial,
+  identical from every complex direction. A pole has no 'side'.
+  verdict: complexifying removes the +0/-0 distinction entirely;
+  what looked like two one-sided blowups is one radially symmetric pole.
+  (Physics already lives here: Lee-Yang zeros study phase transitions
+   via the complex-temperature plane.)
+
+======================================================================
+D. RATIONALS (exact): the pole is an exception, not a value
+======================================================================
+  T = 300 K  ->  tau/tau0 = 1  (exact)
+  T = 30 K  ->  tau/tau0 = 10  (exact)
+  T = 3 K  ->  tau/tau0 = 100  (exact)
+  T = 1/10 K  ->  tau/tau0 = 3000  (exact)
+  T = 0 K  ->  ZeroDivisionError: Fraction(1, 0)
+  verdict: in Q there is no infinity to approach -- the singularity
+  is a hard error. 'Approaching' exists only after completing to R.
+
+======================================================================
+E. THE INSTRUMENT: float32 vs float64 approaching T = 0
+======================================================================
+  float32: tau overflows to inf when T ~ 3.000e-23 K (25 decades below room temp)
+  float64: tau overflows to inf when T ~ 3.000e-302 K (304 decades below room temp)
+  verdict: each float sees 'infinity' at a DIFFERENT temperature.
+  The pole's location is instrument-relative -- L5: at high enough
+  resolution the lens sees the instrument, not the physics.
+
+======================================================================
+F. FINITE FIELD F_101 (hbar = kB = 1 units): no limits at all
+======================================================================
+  tau(T) = T^-1 mod 101, exact for every T != 0:
+  T=1 -> tau=1, T=2 -> tau=51, T=10 -> tau=91, T=25 -> tau=97, T=50 -> tau=99, T=100 -> tau=100
+  T = 0 has NO inverse: there is no infinity in F_101.
+  (You may adjoin one -- the projective line F_101 P^1 has 102 points --
+   but then it is a single ordinary point, and +-inf were never distinct.)
+  verdict: in a finite field 'approaching' is meaningless -- every point
+  is isolated. The '='-vs-'limit' distinction is a topological floor
+  of R/C. Here there is only '='.
+
+======================================================================
+SWEEP VERDICTS
+======================================================================
+  SURVIVES every system with division: the pole at T = 0 (1/T blows up).
+  VARIES: what the blowup *means* -- approached limit (R), smooth point
+    in another chart (RP^1/beta), radially symmetric pole (C), hard
+    error (Q), instrument-relative overflow (floats), nonexistent (F_p).
+  The hotness ordering (negative T hotter than +inf) needs an ORDERED
+    field: it dies in C and in Q_p. Ordering is a floor, not a given.
+  Her circle (0 meets inf) holds under compactification (RP^1) but
+    BREAKS in the surreals (0 and inf genuinely far apart, no meeting)
+    and is vacuous in F_p (no limits to meet at).
+  Domain of validity: the circle is invariant-under-compactification,
+    not invariant full stop. (E7: no 'invariant' without the G.)

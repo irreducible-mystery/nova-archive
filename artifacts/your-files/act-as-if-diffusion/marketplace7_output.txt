@@ -1,0 +1,40 @@
+swans at [336, 550, 820]  (same world as M4)
+swans at [336, 550, 820]  (same world as M4/M5/M6)
+
+=== MARKETPLACE VII: diffusion joins (K=20, w=2, S=4) ===
+paraconsistent | wealth     -2.0 | acc 0.607 | calm 0.587 | swan-acc 0.870 | swan-call 0.09 | spent  1362.0 | maxDD   266.0 | DEAD
+selfbuild      | wealth   2941.0 | acc 0.665 | calm 0.647 | swan-acc 0.870 | swan-call 0.88 | spent  1169.0 | maxDD    32.9 | ALIVE
+dialectical    | wealth   2965.8 | acc 0.664 | calm 0.646 | swan-acc 0.870 | swan-call 0.87 | spent  1116.2 | maxDD    27.9 | ALIVE
+federated      | wealth   3274.0 | acc 0.656 | calm 0.637 | swan-acc 0.870 | swan-call 0.86 | spent   756.0 | maxDD    11.8 | ALIVE
+contrarian     | wealth   2591.0 | acc 0.421 | calm 0.438 | swan-acc 0.232 | swan-call 0.90 | spent   168.0 | maxDD    12.0 | ALIVE
+satisficer     | wealth   3195.7 | acc 0.568 | calm 0.553 | swan-acc 0.739 | swan-call 0.82 | spent   264.3 | maxDD    11.5 | ALIVE
+mimetic        | wealth   3872.0 | acc 0.643 | calm 0.628 | swan-acc 0.812 | swan-call 0.90 | spent   168.0 | maxDD     1.2 | ALIVE
+gate           | wealth   1451.3 | acc 0.531 | calm 0.520 | swan-acc 0.652 | swan-call 0.46 | spent  1531.7 | maxDD    46.3 | ALIVE
+jepa           | wealth   1946.9 | acc 0.627 | calm 0.637 | swan-acc 0.522 | swan-call 0.69 | spent  1844.1 | maxDD    22.3 | ALIVE
+reactive       | wealth   3530.0 | acc 0.568 | calm 0.553 | swan-acc 0.739 | swan-call 0.00 | spent     0.0 | maxDD     0.0 | ALIVE
+stigmergic     | wealth   3366.0 | acc 0.651 | calm 0.633 | swan-acc 0.855 | swan-call 0.27 | spent   252.0 | maxDD    17.3 | ALIVE
+diffusion      | wealth   2893.5 | acc 0.662 | calm 0.643 | swan-acc 0.870 | swan-call 0.83 | spent  1164.5 | maxDD    20.6 | ALIVE
+
+wealth ranking: mimetic(3872) > reactive(3530) > stigmergic(3366) > federated(3274) > satisficer(3196) > dialectical(2966) > selfbuild(2941) > diffusion(2894) > contrarian(2591) > jepa(1947) > gate(1451) > paraconsistent(-2)
+
+--- ablations (diffusion only varies) ---
+K=  1: wealth   3950.8 | swan-acc 0.870 | acc 0.652 | spent    58.2
+K=  5: wealth   3801.9 | swan-acc 0.870 | acc 0.670 | spent   291.1
+K= 20: wealth   2893.5 | swan-acc 0.870 | acc 0.662 | spent  1164.5
+K= 50: wealth   1176.8 | swan-acc 0.870 | acc 0.660 | spent  2911.2
+w=  0: wealth   1999.5 | swan-acc 0.420 | acc 0.488 | spent  1164.5
+w=  1: wealth   2923.5 | swan-acc 0.870 | acc 0.664 | spent  1164.5
+w=  2: wealth   2893.5 | swan-acc 0.870 | acc 0.662 | spent  1164.5
+w=  5: wealth   2791.5 | swan-acc 0.870 | acc 0.665 | spent  1164.5
+no-uncertainty: wealth   2893.5 | maxDD 20.6 (default maxDD 20.6)
+
+--- pre-registered predictions (marketplace7_PREDICTIONS.md) ---
+P1: PASS (diffusion swan-acc 0.870 vs jepa 0.522, gate 0.652)
+P2: PASS (rank 8/12, spent 1164.5)
+P3: FAIL (swan-acc K1 0.870 < K20 0.870, K50 0.870 >= K20-0.02; wealth K1 3951, K20 2894, K50 1177)
+P4: FAIL (swan-acc w5 0.870 < w2 0.870; w0 0.420 <= 0.55)
+P5: FAIL (onset5 diffusion 0.933 < reactive 0.867; full-swan diffusion 0.870 > reactive 0.739)
+P6: FAIL (maxDD no-uncertainty 20.6 > default 20.6)
+
+wrote marketplace7_results.json
+wrote marketplace7_diffusion.png

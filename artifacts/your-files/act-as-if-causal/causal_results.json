@@ -1,0 +1,37 @@
+{
+  "seed": 20261015,
+  "n_obs": 20000,
+  "n_rct_per_arm": 400,
+  "n_rollout_per_arm": 5000,
+  "observational": {
+    "P_Y_given_T1": 0.3291649858814038,
+    "P_Y_given_T0": 0.23631495438318129
+  },
+  "rct": {
+    "do_T1": 0.2175,
+    "do_T0": 0.4525
+  },
+  "backdoor_adjusted": {
+    "do_T1": 0.2240100896997556,
+    "do_T0": 0.44542460795084693
+  },
+  "assoc_recommends_T": 0,
+  "causal_recommends_T": 1,
+  "rollout": {
+    "do_T1": 0.2188,
+    "do_T0": 0.4498
+  },
+  "checks": {
+    "P1_disagreement": true,
+    "P2_rollout": true,
+    "P3_surprise": true,
+    "P4_routes_converge": true
+  },
+  "all_pass": true,
+  "truth": {
+    "obs_given_T1": 0.33,
+    "obs_given_T0": 0.24,
+    "do_T1": 0.225,
+    "do_T0": 0.45
+  }
+}

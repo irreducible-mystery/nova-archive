@@ -1,0 +1,26 @@
+swans at [336, 550, 820]  (same world as M4)
+
+=== MARKETPLACE V: organization structures ===
+paraconsistent | wealth     -2.0 | acc 0.607 | calm 0.587 | swan-acc 0.870 | swan-call 0.09 | spent  1362.0 | DEAD
+selfbuild      | wealth   2941.0 | acc 0.665 | calm 0.647 | swan-acc 0.870 | swan-call 0.88 | spent  1169.0 | ALIVE
+dialectical    | wealth   2965.8 | acc 0.664 | calm 0.646 | swan-acc 0.870 | swan-call 0.87 | spent  1116.2 | ALIVE
+federated      | wealth   3274.0 | acc 0.656 | calm 0.637 | swan-acc 0.870 | swan-call 0.86 | spent   756.0 | ALIVE
+contrarian     | wealth   2597.0 | acc 0.418 | calm 0.435 | swan-acc 0.232 | swan-call 0.90 | spent   168.0 | ALIVE
+satisficer     | wealth   3195.7 | acc 0.568 | calm 0.553 | swan-acc 0.739 | swan-call 0.82 | spent   264.3 | ALIVE
+mimetic        | wealth   3872.0 | acc 0.643 | calm 0.628 | swan-acc 0.812 | swan-call 0.90 | spent   168.0 | ALIVE
+gate           | wealth   1451.3 | acc 0.531 | calm 0.520 | swan-acc 0.652 | swan-call 0.46 | spent  1531.7 | ALIVE
+jepa           | wealth   1946.9 | acc 0.627 | calm 0.637 | swan-acc 0.522 | swan-call 0.69 | spent  1844.1 | ALIVE
+reactive       | wealth   3530.0 | acc 0.568 | calm 0.553 | swan-acc 0.739 | swan-call 0.00 | spent     0.0 | ALIVE
+stigmergic     | wealth   3362.0 | acc 0.656 | calm 0.637 | swan-acc 0.870 | swan-call 0.19 | spent   252.0 | ALIVE
+
+--- pre-registered predictions ---
+P1: PASS (paraconsistent 0.870 vs gate 0.652)
+P2: FAIL (first200 0.735 <0.52, last200 0.705 > first+0.03, built 217)
+P3: FAIL (swan-call 0.19 >=0.55, spent 252.0 <400)
+P4: FAIL (calm 0.435 <0.52, swan 0.232 > calm)
+P5: FAIL (satisficer 264.3 vs min-other 168.0 (contrarian))
+P6: FAIL (checkpoints: 300:884<884, 400:1362<1362, 500:1864<1864, 600:2264<2264, 700:2622<2622, 800:2944<2944, 900:3482<3482)
+
+wealth ranking: mimetic(3872) > reactive(3530) > stigmergic(3362) > federated(3274) > satisficer(3196) > dialectical(2966) > selfbuild(2941) > contrarian(2597) > jepa(1947) > gate(1451) > paraconsistent(-2)
+
+wrote marketplace5.png

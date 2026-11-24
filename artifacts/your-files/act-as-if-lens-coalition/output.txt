@@ -1,0 +1,28 @@
+Lens Coalition Game — seed 20261026, 850 scored rounds
+Swan centres [336, 550, 820], biases [0.92, 0.08, 0.92] (new world, NOT M5 verbatim)
+
+[cooperation] total_gain=-620.05 wealth={'reactive': 311.49, 'holder': -495.07, 'router': 163.53} rank=['reactive', 'router', 'holder']
+  coalition_rounds=427 (0.502) preserved=38 share=0.089
+  preserved_mean=-0.4728 (no-bonus -0.7228) fused_mean=0.1631 solo_baseline=-0.2698
+  pairings={'holder+router': -0.1653, 'reactive+router': 0.2545, 'holder+reactive': -0.3027}
+  broken_rate=0.000 defection_events=0 productive_share=0.000
+
+[competition] total_gain=-688.01 wealth={'reactive': 239.5, 'holder': -474.53, 'router': 147.03} rank=['reactive', 'router', 'holder']
+  coalition_rounds=0 (0.000) preserved=0 share=0.000
+  preserved_mean=0.0000 (no-bonus 0.0000) fused_mean=0.0000 solo_baseline=-0.2698
+  pairings={}
+  broken_rate=0.000 defection_events=0 productive_share=0.000
+
+[coopetition] total_gain=-778.92 wealth={'reactive': 182.63, 'holder': -490.97, 'router': 129.42} rank=['reactive', 'router', 'holder']
+  coalition_rounds=427 (0.502) preserved=38 share=0.089
+  preserved_mean=0.0000 (no-bonus 0.0000) fused_mean=0.3016 solo_baseline=-0.2698
+  pairings={'holder+router': -0.1227, 'reactive+router': 0.4767, 'holder+reactive': -0.3435}
+  broken_rate=0.407 defection_events=174 productive_share=0.529
+
+PREDICTIONS: 2/6
+  P1_total_ordering: FAIL — {'cooperation': -620.0476124999939, 'competition': -688.007374999995, 'coopetition': -778.920837499998}
+  P2_holder_survival_rank: FAIL — {'survived': {'cooperation': False, 'competition': False, 'coopetition': False}, 'rank': {'cooperation': ['reactive', 'router', 'holder'], 'competition': ['reactive', 'router', 'holder'], 'coopetition': ['reactive', 'router', 'holder']}, 'holder_wealth': {'cooperation': -495.06879999999893, 'competition': -474.53269999999907, 'coopetition': -490.96928749999944}}
+  P3_preserved_minority_and_pays: FAIL — {'preserved_share': {'cooperation': 0.08899297423887588, 'coopetition': 0.08899297423887588}, 'preserved_mean': -0.47283930921052625, 'fused_mean': 0.2176837908878505}
+  P4_pairing_beats_solo: FAIL — {'reactive+holder_mean': -0.3231159567901234, 'router_coalition_mean': 0.11079253209017118, 'solo_baseline_mean': -0.2698068137254902}
+  P5_defection_productive: PASS — {'broken_rate': 0.40749414519906324, 'defection_events': 174, 'productive_share': 0.5287356321839081}
+  P6_reactive_wins_competition: PASS — {'competition_rank': ['reactive', 'router', 'holder'], 'competition_wealth': {'reactive': 239.50000000000446, 'holder': -474.53269999999907, 'router': 147.02532499999955}}

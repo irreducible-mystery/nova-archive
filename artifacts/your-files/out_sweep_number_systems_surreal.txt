@@ -1,0 +1,127 @@
+======================================================================
+I. TIER A -- FINITE-DAY SURREALS, CONWAY'S RECURSION ITSELF
+======================================================================
+  recursive <= gives the chain  -2 < -1 < -1/2 < 0 < 1/4 < 1/2
+    < 3/4 < 1 < 2 :  True
+  0 < {0|1} < 1 (its own cut is respected): True
+  {0|1} == {0,1/4|1} (more options, same number -- the cut
+    is a representative, not the number): True
+  generation by birthday (values as exact dyadic fractions):
+    day 1:   2 born,   3 total, max |x| = 1 (== day: True)
+    day 2:   4 born,   7 total, max |x| = 2 (== day: True)
+    day 3:   8 born,  15 total, max |x| = 3 (== day: True)
+    day 4:  16 born,  31 total, max |x| = 4 (== day: True)
+    day 5:  32 born,  63 total, max |x| = 5 (== day: True)
+    day 6:  64 born, 127 total, max |x| = 6 (== day: True)
+  COMPUTED: numbers born by day n satisfy |x| <= n, and every
+  finite-day number is a dyadic rational (the generation only
+  ever produces dyadics -- check: all denominators are powers
+  of 2: True).
+  CONSEQUENCE: 1/3 is NOT born on any finite day, and neither is
+  any number > every integer. omega and 1/3 both wait for the
+  first infinite birthday, day omega itself. In No, even most
+  RATIONALS are transfinite arrivals. '=' has a birthday, and
+  for non-dyadics it is not finite.
+
+======================================================================
+J. TIER B -- THE OMEGA SLICE: tau = 1/T AT INFINITE T
+======================================================================
+  omega * epsilon = 1   (exactly 1: True)
+  epsilon > 0: True, and epsilon != 0: True
+  T = 2          -> tau = 1/2        (T*tau == 1 exactly: True)
+  T = 1/2        -> tau = 2          (T*tau == 1 exactly: True)
+  T = omega      -> tau = eps        (T*tau == 1 exactly: True)
+  T = omega^2    -> tau = eps^2      (T*tau == 1 exactly: True)
+  T = -omega     -> tau = -eps       (T*tau == 1 exactly: True)
+  T = epsilon    -> tau = w          (T*tau == 1 exactly: True)
+  T = epsilon^2  -> tau = w^2        (T*tau == 1 exactly: True)
+  T = 0 -> still NO reciprocal. Even No does not divide by zero:
+    for every T in the slice, T * 0 = 0, never 1.
+    The pole is not removed; its NEIGHBORHOOD is populated.
+  AT the points Kelly asked about ('=', not limit): T = omega is
+  a number, tau = epsilon is a number, and their product is
+  exactly 1 -- no limit is taken anywhere in this table.
+
+======================================================================
+K. ORDERING: SURVIVES HERE (the exception in the whole sweep)
+======================================================================
+  -w^2 < -w < -1000 < -eps < 0 < eps < 1/1000 < 1000 < w < w^2
+    < w^3 :  True
+  squares >= 0 for sampled x (incl. infinite/infinitesimal): True
+  No is an ordered FIELD (Conway): the only system in the sweep
+  besides R and Q where the hotness ordering even PARSES. But it
+  parses as a LINE, not a circle: -omega is the far cold end,
+  NOT wrapped to hottest. beta = 1/T near the old gluing point:
+    1/omega = eps, 1/(-omega) = -eps: two DISTINCT points,
+    distance 2*eps apart, with beta = 0 between them
+    attained by NO temperature: 1/T = 0 has no solution T.
+  In RP^1 beta=0 was the smooth glued point. In No beta=0 is a
+  HOLE in the reciprocal map -- the gluing point has no preimage.
+
+======================================================================
+L. APPROACHING: FINITE SEQUENCES CANNOT REACH 0 AT ALL
+======================================================================
+  Archimedean property FAILS, computed: n < omega for all
+    tested n up to 10^6: True;  epsilon < 1/n for all
+    tested n up to 10^6: True;  n*epsilon < 1 throughout:
+    True (10^6 * eps still infinitesimal)
+  the real sequence 1/2^k -> 0: EVERY term (k < 60 checked) is
+    still > epsilon: True. The eps-neighborhood of 0,
+    {x : |x| < eps}, contains NO term of the sequence. In the
+    order topology of No, 1/2^k does NOT converge to 0.
+  Worse (theorem, Conway's cut construction): for ANY set-sized
+  collection S of positive surreals, the cut {0 | S} is itself a
+  surreal -- some positive number sits below ALL of S. So no
+  sequence, of ANY set length, converges to 0 in No. Approaching
+  0 requires a proper-class net. Finite demonstration:
+    S = {1/1000, eps, eps^2, 3eps^2, w^-50}: mu = eps^51 is
+    positive (True) and below every member: True
+
+======================================================================
+M. RECIPROCALS OF MIXED NUMBERS: THE GEOMETRIC SERIES IS REAL
+======================================================================
+  1/(1 + eps) = 1 - eps + eps^2 - eps^3 + eps^4  + (terms below w^-4)
+    check: (1 + eps) * approx = 1 + (eps^5); the residual
+    is a single monomial at the truncation floor -- the
+    series is infinite (eps, eps^2, ... forever) but every
+    partial sum is an exact surreal and the error is one
+    named monomial, not a fog.
+  1/(omega + 1) = eps - eps^2 + eps^3 - eps^4  + (terms below w^-4)
+    check: (omega + 1) * approx = 1 + (-eps^4); the residual
+    is a single monomial at the truncation floor -- the
+    series is infinite (eps, eps^2, ... forever) but every
+    partial sum is an exact surreal and the error is one
+    named monomial, not a fog.
+
+======================================================================
+SURREAL VERDICTS (part 3, completing the sweep)
+======================================================================
+  POLE: transformed, not removed. 1/0 is still undefined -- No
+    is a field, fields do not divide by zero. But the pole's
+    neighborhood, empty of points AT the extremes in R, is
+    fully OCCUPIED here: omega, omega^2, epsilon, epsilon^2
+    are numbers, with exact reciprocals pairing them.
+  ORDERING: SURVIVES -- uniquely in the sweep outside R/Q.
+    No is an ordered field. And precisely because it survives,
+    the circle DIES by ordering: a total order cannot wrap;
+    -omega < ... < omega, full stop.
+  APPROACHING: dies hardest here. R: approach by sliding.
+    Q_7: by jumping. No: no set-length sequence reaches 0 at
+    all -- between any proposed approach and 0, a cut inserts
+    another positive number. Limits give way to birthdays:
+    most rationals and all infinities arrive only at day omega
+    or later. '=' is not the limit of approaching; it is an
+    EVENT (a birthday) that approaching never produces.
+  THE CIRCLE: breaks, twice over. (1) No single infinity: for
+    every surreal x, x+1 and 2x are larger -- infinity is a
+    hierarchy (omega, omega^2, ...), not a point to glue.
+    (2) The RP^1 gluing point beta=0 has no T-preimage: 1/T=0
+    is unsolvable. What the projective line glues, No leaves
+    as a hole with occupied shores 2*epsilon apart.
+  E7 restated for the last system: the circle was invariant-
+    under-compactification. No is the system that DECLINES
+    compactification -- a proper class cannot be one-point
+    compactified by a point -- and declines completion too
+    (it contains R; it is not built by completing Q). Name
+    the G or lose the invariant: here the G that must be
+    named is the compactification itself.

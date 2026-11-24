@@ -1,0 +1,130 @@
+swans at [336, 550, 820]  (same world as M4)
+swan_times=[336, 550, 820] rounds=150..989 n_rounds=840
+REPRODUCTION:
+  paraconsistent: wealth -1.9 vs saved -1.9 | priced 55.0 vs saved 55.0 | brier 0.2454 recomputed 0.2454 vs saved 0.2454 | lived 37 rounds, alive=False
+  selfbuild: wealth -0.2 vs saved -0.2 | priced -21.9 vs saved -21.9 | brier 0.2243 recomputed 0.2243 vs saved 0.2243 | lived 532 rounds, alive=False
+  dialectical: wealth -0.0 vs saved -0.0 | priced 125.7 vs saved 125.7 | brier 0.2317 recomputed 0.2317 vs saved 0.2317 | lived 161 rounds, alive=False
+  federated: wealth 393.6 vs saved 393.6 | priced 236.4 vs saved 236.4 | brier 0.2264 recomputed 0.2264 vs saved 0.2264 | lived 840 rounds, alive=True
+  contrarian: wealth -0.2 vs saved -0.2 | priced -1048.4 vs saved -1048.4 | brier 0.345 recomputed 0.345 vs saved 0.345 | lived 312 rounds, alive=False
+  satisficer: wealth 2494.2 vs saved 2494.2 | priced -4109.5 vs saved -4109.5 | brier 0.3704 recomputed 0.3704 vs saved 0.3704 | lived 840 rounds, alive=True
+  mimetic: wealth 1038.3 vs saved 1038.3 | priced 207.5 vs saved 207.5 | brier 0.2448 recomputed 0.2448 vs saved 0.2448 | lived 840 rounds, alive=True
+  gate: wealth -5.9 vs saved -5.9 | priced -4727.1 vs saved -4727.1 | brier 0.42 recomputed 0.42 vs saved 0.42 | lived 571 rounds, alive=False
+  jepa: wealth -2.5 vs saved -2.5 | priced 106.8 vs saved 106.8 | brier 0.2195 recomputed 0.2195 vs saved 0.2195 | lived 64 rounds, alive=False
+  reactive: wealth 3488.0 vs saved 3488.0 | priced -5920.0 vs saved -5920.0 | brier 0.4321 recomputed 0.4321 vs saved 0.4321 | lived 840 rounds, alive=True
+  stigmergic: wealth -0.1 vs saved -0.1 | priced 650.2 vs saved 650.2 | brier 0.2228 recomputed 0.2228 vs saved 0.2228 | lived 570 rounds, alive=False
+  diffusion: wealth 1179.3 vs saved 1179.3 | priced -504.9 vs saved -504.9 | brier 0.2363 recomputed 0.2363 vs saved 0.2363 | lived 840 rounds, alive=True
+  router: wealth 1132.8 vs saved 1132.8 | priced 667.2 vs saved 667.2 | brier 0.2286 recomputed 0.2286 vs saved 0.2286 | lived 840 rounds, alive=True
+  calibrator: wealth 796.1 vs saved 796.1 | priced 351.7 vs saved 351.7 | brier 0.2282 recomputed 0.2282 vs saved 0.2282 | lived 840 rounds, alive=True
+  retriever: wealth 1350.6 vs saved 1350.6 | priced 555.5 vs saved 555.5 | brier 0.2332 recomputed 0.2332 vs saved 0.2332 | lived 840 rounds, alive=True
+  underwriter: wealth 4928.1 vs saved 4928.1 | priced 700.1 vs saved 700.1 | brier 0.2301 recomputed 0.2301 vs saved 0.2301 | lived 840 rounds, alive=True
+  short: wealth 216.0 vs saved 216.0 | priced 857.2 vs saved 857.2 | brier 0.2292 recomputed 0.2292 vs saved 0.2292 | lived 840 rounds, alive=True
+SWAN_SEGMENTS=[(325, 347), (539, 561), (809, 831)] onset_rounds=[325, 326, 327, 328, 329, 539, 540, 541, 542, 543, 809, 810, 811, 812, 813]
+DISAGREEMENT: {
+ "calm_mean_std": 0.20114930651707058,
+ "swan_mean_std": 0.1889895252748549,
+ "onset_mean_std": 0.18630417110819655,
+ "swan_vs_calm_rel": -0.060451519583955116,
+ "onset_vs_calm_rel": -0.07380157389513142,
+ "calm_n": 771,
+ "swan_n": 69,
+ "onset_n": 15
+}
+  segment 325..347: mean_std=0.2106 n=23
+  segment 539..561: mean_std=0.1851 n=23
+  segment 809..831: mean_std=0.1712 n=23
+REGIME:
+  paraconsistent: {"lived_brier": 0.24543827027027026, "calm_brier": 0.24543827027027026, "swan_brier": null, "calm_acc": 0.7297297297297297, "swan_acc": null, "n_calm": 37, "n_swan": 0}
+  selfbuild: {"lived_brier": 0.224327485380117, "calm_brier": 0.23154092363968906, "swan_brier": 0.1481159420289855, "calm_acc": 0.668724279835391, "swan_acc": 0.8478260869565217, "n_calm": 486, "n_swan": 46}
+  dialectical: {"lived_brier": 0.23171021118012416, "calm_brier": 0.23171021118012416, "swan_brier": null, "calm_acc": 0.7018633540372671, "swan_acc": null, "n_calm": 161, "n_swan": 0}
+  federated: {"lived_brier": 0.22641623288559254, "calm_brier": 0.23402847123143816, "swan_brier": 0.14135774354288294, "calm_acc": 0.6368352788586251, "swan_acc": 0.8695652173913043, "n_calm": 771, "n_swan": 69}
+  contrarian: {"lived_brier": 0.3450306843255804, "calm_brier": 0.33589973146810814, "swan_brier": 0.4597630919694701, "calm_acc": 0.34256055363321797, "swan_acc": 0.13043478260869565, "n_calm": 289, "n_swan": 23}
+  satisficer: {"lived_brier": 0.37039297619047623, "calm_brier": 0.3830184176394293, "swan_brier": 0.2293173913043478, "calm_acc": 0.5525291828793775, "swan_acc": 0.7391304347826086, "n_calm": 771, "n_swan": 69}
+  mimetic: {"lived_brier": 0.24477741380904633, "calm_brier": 0.24925862860257386, "swan_brier": 0.19470470937702106, "calm_acc": 0.5551232166018158, "swan_acc": 0.6086956521739131, "n_calm": 771, "n_swan": 69}
+  gate: {"lived_brier": 0.419983270827701, "calm_brier": 0.42791882457722547, "swan_brier": 0.3294144508603016, "calm_acc": 0.52, "swan_acc": 0.6521739130434783, "n_calm": 525, "n_swan": 46}
+  jepa: {"lived_brier": 0.21953125000000004, "calm_brier": 0.21953125000000004, "swan_brier": null, "calm_acc": 0.703125, "swan_acc": null, "n_calm": 64, "n_swan": 0}
+  reactive: {"lived_brier": 0.43214285714285716, "calm_brier": 0.4474708171206226, "swan_brier": 0.2608695652173913, "calm_acc": 0.5525291828793775, "swan_acc": 0.7391304347826086, "n_calm": 771, "n_swan": 69}
+  stigmergic: {"lived_brier": 0.22275287806299754, "calm_brier": 0.2289100666098556, "swan_brier": 0.15261446939878837, "calm_acc": 0.6469465648854962, "swan_acc": 0.8478260869565217, "n_calm": 524, "n_swan": 46}
+  diffusion: {"lived_brier": 0.23632318840371672, "calm_brier": 0.24579705871832944, "swan_brier": 0.1304629853230445, "calm_acc": 0.6433203631647212, "swan_acc": 0.8695652173913043, "n_calm": 771, "n_swan": 69}
+  router: {"lived_brier": 0.22859637691004933, "calm_brier": 0.23438266276318145, "swan_brier": 0.16394092194244242, "calm_acc": 0.6381322957198443, "swan_acc": 0.7536231884057971, "n_calm": 771, "n_swan": 69}
+  calibrator: {"lived_brier": 0.22815670468872457, "calm_brier": 0.2345783045474677, "swan_brier": 0.15640230626711585, "calm_acc": 0.6057068741893644, "swan_acc": 0.8405797101449275, "n_calm": 771, "n_swan": 69}
+  retriever: {"lived_brier": 0.2331695022941604, "calm_brier": 0.23919550905661519, "swan_brier": 0.16583542673107893, "calm_acc": 0.6186770428015564, "swan_acc": 0.782608695652174, "n_calm": 771, "n_swan": 69}
+  underwriter: {"lived_brier": 0.2301164021164021, "calm_brier": 0.23345075659316905, "swan_brier": 0.192858615136876, "calm_acc": 0.6394293125810635, "swan_acc": 0.8695652173913043, "n_calm": 771, "n_swan": 69}
+  short: {"lived_brier": 0.22919151971164684, "calm_brier": 0.23622819740334872, "swan_brier": 0.15056429506958685, "calm_acc": 0.5953307392996109, "swan_acc": 0.8260869565217391, "n_calm": 771, "n_swan": 69}
+COMMON_ALL_ROUNDS: 150..186 n=37
+COMMON_SIGNAL_ROUNDS: n=37
+LIVED_RANK: ['jepa', 'stigmergic', 'selfbuild', 'federated', 'calibrator', 'router', 'short', 'underwriter', 'dialectical', 'retriever', 'diffusion', 'mimetic', 'paraconsistent', 'contrarian', 'satisficer', 'gate', 'reactive']
+COMMON_RANK: ['federated', 'diffusion', 'stigmergic', 'jepa', 'router', 'underwriter', 'calibrator', 'retriever', 'dialectical', 'short', 'selfbuild', 'mimetic', 'paraconsistent', 'contrarian', 'satisficer', 'reactive', 'gate']
+SWAN_WEIGHTED_RANK: ['stigmergic', 'selfbuild', 'federated', 'calibrator', 'short', 'router', 'diffusion', 'retriever', 'underwriter', 'mimetic', 'satisficer', 'contrarian', 'gate', 'reactive']
+COMMON_BRIER: {
+ "paraconsistent": 0.24543827027027026,
+ "selfbuild": 0.2408408408408409,
+ "dialectical": 0.23162291891891887,
+ "federated": 0.20305736422699344,
+ "contrarian": 0.303768624231308,
+ "satisficer": 0.32865675675675676,
+ "mimetic": 0.24179231154026537,
+ "gate": 0.48784457933811504,
+ "jepa": 0.2178378378378379,
+ "reactive": 0.43243243243243246,
+ "stigmergic": 0.21756327817510585,
+ "diffusion": 0.21135957493754035,
+ "router": 0.2246988375361248,
+ "calibrator": 0.22677282849605843,
+ "retriever": 0.2296346466782364,
+ "underwriter": 0.22502462462462458,
+ "short": 0.2332391392103981
+}
+SWAN_WEIGHTED_BRIER: {
+ "paraconsistent": null,
+ "selfbuild": 0.21309116809116796,
+ "dialectical": null,
+ "federated": 0.2144141147574802,
+ "contrarian": 0.35977283726306364,
+ "satisficer": 0.35048660531697395,
+ "mimetic": 0.23771194017753344,
+ "gate": 0.407415651767368,
+ "jepa": null,
+ "reactive": 0.40797546012269936,
+ "stigmergic": 0.21300554634531316,
+ "diffusion": 0.22138585913466494,
+ "router": 0.21947321455265703,
+ "calibrator": 0.21803185092371238,
+ "retriever": 0.2236683750674683,
+ "underwriter": 0.22485916837082515,
+ "short": 0.21809688065172433
+}
+ENSEMBLE_BASE_BRIER=0.2320
+  ensemble LOO -paraconsistent: 0.2320 delta=-0.0000
+  ensemble LOO -selfbuild: 0.2330 delta=+0.0010
+  ensemble LOO -dialectical: 0.2322 delta=+0.0002
+  ensemble LOO -federated: 0.2340 delta=+0.0020
+  ensemble LOO -contrarian: 0.2318 delta=-0.0002
+  ensemble LOO -satisficer: 0.2279 delta=-0.0041
+  ensemble LOO -mimetic: 0.2333 delta=+0.0013
+  ensemble LOO -gate: 0.2292 delta=-0.0028
+  ensemble LOO -jepa: 0.2321 delta=+0.0001
+  ensemble LOO -reactive: 0.2270 delta=-0.0050
+  ensemble LOO -stigmergic: 0.2334 delta=+0.0014
+  ensemble LOO -diffusion: 0.2345 delta=+0.0025
+  ensemble LOO -router: 0.2338 delta=+0.0018
+  ensemble LOO -calibrator: 0.2342 delta=+0.0022
+  ensemble LOO -retriever: 0.2341 delta=+0.0021
+  ensemble LOO -underwriter: 0.2339 delta=+0.0019
+ROUTER_PRICED_ORIGINAL=667.2 RECOMPUTED=667.2
+  router LOO -paraconsistent: 758.0 delta=+90.9
+  router LOO -selfbuild: 666.1 delta=-1.1
+  router LOO -dialectical: 712.2 delta=+45.0
+  router LOO -federated: 667.2 delta=+0.0
+  router LOO -contrarian: 667.2 delta=+0.0
+  router LOO -satisficer: 667.2 delta=+0.0
+  router LOO -mimetic: 666.8 delta=-0.3
+  router LOO -gate: 667.2 delta=+0.0
+  router LOO -jepa: 733.1 delta=+65.9
+  router LOO -reactive: 667.2 delta=+0.0
+  router LOO -stigmergic: 647.3 delta=-19.9
+  router LOO -diffusion: 600.4 delta=-66.8
+  router LOO -calibrator: 654.1 delta=-13.0
+  router LOO -retriever: 667.7 delta=+0.5
+  router LOO -underwriter: 650.4 delta=-16.8
+ROUTER_TOP3_FREQ: {'federated': 427, 'selfbuild': 416, 'dialectical': 413, 'paraconsistent': 388, 'jepa': 244, 'stigmergic': 219, 'diffusion': 182, 'underwriter': 147, 'calibrator': 45, 'retriever': 30, 'mimetic': 8, 'satisficer': 1}
+wrote lens_scoreboard_results.json

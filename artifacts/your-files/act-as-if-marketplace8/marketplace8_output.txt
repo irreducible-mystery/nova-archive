@@ -1,0 +1,49 @@
+swans at [336, 550, 820]  (same world as M4)
+swans at [336, 550, 820]  (same world as M4/M5/M6/M7)
+
+=== MARKETPLACE VIII: five new roles, priced quality (K=20, w=2, S=4) ===
+animal             signW rank  pricedW rank  brier   acc  swan stake   spent  state
+paraconsistent      -1.9   15     55.0   11  0.245 0.730 0.000  0.20   151.8  DEAD
+selfbuild           -0.2   13    -21.9   12  0.224 0.684 0.848  0.39   768.2  DEAD
+dialectical         -0.0   11    125.7    9  0.232 0.702 0.000  0.20   192.1  DEAD
+federated          393.6    9    236.4    7  0.226 0.656 0.870  0.40   756.0  ALIVE
+contrarian          -0.2   14  -1048.4   14  0.345 0.327 0.130  0.35    62.4  DEAD
+satisficer        2494.2    3  -4109.5   15  0.370 0.568 0.739  0.86   264.3  ALIVE
+mimetic           1038.3    7    207.5    8  0.245 0.560 0.609  0.29   168.0  ALIVE
+gate                -5.9   17  -4727.1   16  0.420 0.531 0.652  0.85  1044.6  DEAD
+jepa                -2.5   16    106.8   10  0.220 0.703 0.000  0.20   171.2  DEAD
+reactive          3488.0    2  -5920.0   17  0.432 0.568 0.739  1.00     0.0  ALIVE
+stigmergic          -0.1   12    650.2    4  0.223 0.663 0.848  0.29   171.0  DEAD
+diffusion         1179.3    5   -504.9   13  0.236 0.662 0.870  0.76  1164.5  ALIVE
+router            1132.8    6    667.2    3  0.229 0.648 0.754  0.31   252.0  ALIVE
+calibrator         796.1    8    351.7    6  0.228 0.625 0.841  0.37   582.2  ALIVE
+retriever         1350.6    4    555.5    5  0.233 0.632 0.783  0.37   210.0  ALIVE
+underwriter       4928.1    1    700.1    2  0.230 0.658 0.870  0.21   168.0  ALIVE
+short              216.0   10    857.2    1  0.229 0.614 0.826  0.00    42.0  ALIVE
+
+sign ranking:   underwriter(4928) > reactive(3488) > satisficer(2494) > retriever(1351) > diffusion(1179) > router(1133) > mimetic(1038) > calibrator(796) > federated(394) > short(216) > dialectical(-0) > stigmergic(-0) > selfbuild(-0) > contrarian(-0) > paraconsistent(-2) > jepa(-3) > gate(-6)
+priced ranking: short(857) > underwriter(700) > router(667) > stigmergic(650) > retriever(556) > calibrator(352) > federated(236) > mimetic(207) > dialectical(126) > jepa(107) > paraconsistent(55) > selfbuild(-22) > diffusion(-505) > contrarian(-1048) > satisficer(-4110) > gate(-4727) > reactive(-5920)
+
+insurance: premiums 5042.5, payouts 925.0, underwriter net 4117.5, covers sold 1743
+escrow: calls 70, shorts taken 38, short net 150.0, bonuses paid 16.0, forfeited to pool 140.0, pool final 656.3
+retriever swan halves: first 0.826, second 0.696, overall 0.783
+
+--- Diffusion K mini-ablation (VIII market) ---
+K=1:  diffusion brier 0.2285 | signW 2121.6 | pricedW 864.3
+K=20: diffusion brier 0.2363 | signW 1179.3 | pricedW -504.9
+
+--- design check: Diffusion stake on/off (not scored) ---
+stake on:  wealth 1179.30
+stake off: wealth 2153.29
+stake moves wealth: True
+
+--- pre-registered predictions (marketplace8_PREDICTIONS.md) ---
+P1: PASS (router priced rank 3, sign rank 6 (needs priced<=3, both <=8 and above medians))
+P2: FAIL (best brier: jepa 0.2195 (calibrator 0.2282); calibrator sign rank 8 (needs 5-10))
+P3: FAIL ((a) paraconsistent alive=False, wealth -1.9; (b) underwriter wealth 4928.1, net insurance 4117.5 (needs >0 and >=-150))
+P4: PASS (short net escrow 150.0 (needs >0), priced rank 1 (needs <=8))
+P5: FAIL (retriever swan halves 0.826 -> 0.696, overall 0.783 (needs > and >=0.78))
+P6: FAIL (diffusion priced rank 13 < sign rank 5; brier K20 0.2363 < K1 0.2285)
+
+wrote marketplace8_results.json
+wrote marketplace8_roles.png
